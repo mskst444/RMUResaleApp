@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AccountOverviewViewController: UIViewController {
 
@@ -18,5 +19,10 @@ class AccountOverviewViewController: UIViewController {
     
     @IBAction func unwindFromAccountEdit(segue: UIStoryboardSegue) {
     }
-
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
 }
