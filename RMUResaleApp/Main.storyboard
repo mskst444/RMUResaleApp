@@ -50,7 +50,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pzj-96-Oyn"/>
-                                    <segue destination="neW-Gc-4af" kind="show" id="FWS-RU-sCC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6d-Af-VxK">
@@ -86,6 +85,7 @@
                         <outlet property="usernameField" destination="TMQ-Bf-6vO" id="fC9-jg-XYW"/>
                         <outlet property="warningLabel" destination="n6d-Af-VxK" id="weD-06-8dj"/>
                         <segue destination="qtv-W0-R5V" kind="show" identifier="createAccountSegue" id="LeE-3r-xNl"/>
+                        <segue destination="neW-Gc-4af" kind="show" identifier="loginSegue" id="Bkg-qH-wgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,32 +100,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-DC-bOI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-DC-bOI">
                                 <rect key="frame" x="184" y="433" width="48" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="50"/>
                                 <color key="textColor" red="0.89010945429999999" green="0.133152195" blue="0.0076903529959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ISBN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-4o-iMl">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ISBN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-4o-iMl">
                                 <rect key="frame" x="80" y="350" width="254" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-Gw-pOB">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-Gw-pOB">
                                 <rect key="frame" x="80" y="536" width="254" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Author" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBI-zb-Egs">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Author" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBI-zb-Egs">
                                 <rect key="frame" x="81" y="586" width="254" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-co-Vqa">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-co-Vqa">
                                 <rect key="frame" x="149" y="700" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,34 +146,8 @@
                                     <navigationItem title="Title" id="Ue7-p4-PW8"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JII-2g-eOH">
-                                <rect key="frame" x="131" y="140" width="153" height="56"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="50"/>
-                                <color key="textColor" red="0.89010945429999999" green="0.133152195" blue="0.0076903529959999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.061732732569999997" blue="0.65924546630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="JII-2g-eOH" firstAttribute="centerX" secondItem="CA2-fe-tO5" secondAttribute="centerX" id="0Jv-WB-Ws0"/>
-                            <constraint firstItem="2oT-Gw-pOB" firstAttribute="top" secondItem="dcz-DC-bOI" secondAttribute="bottom" constant="47" id="8Xt-aL-8f4"/>
-                            <constraint firstItem="JII-2g-eOH" firstAttribute="top" secondItem="t7Z-VI-e84" secondAttribute="top" constant="24" id="9fR-ca-2V7"/>
-                            <constraint firstItem="dtp-4o-iMl" firstAttribute="leading" secondItem="t7Z-VI-e84" secondAttribute="leading" constant="80" id="9pj-Bt-cNb"/>
-                            <constraint firstItem="JII-2g-eOH" firstAttribute="leading" secondItem="t7Z-VI-e84" secondAttribute="leading" constant="131" id="BUY-TS-dIV"/>
-                            <constraint firstItem="dcz-DC-bOI" firstAttribute="centerX" secondItem="kBI-zb-Egs" secondAttribute="centerX" id="GdW-vZ-5Wk"/>
-                            <constraint firstItem="dcz-DC-bOI" firstAttribute="leading" secondItem="t7Z-VI-e84" secondAttribute="leading" constant="184" id="Id8-NT-uzO"/>
-                            <constraint firstItem="dtp-4o-iMl" firstAttribute="leading" secondItem="2oT-Gw-pOB" secondAttribute="leading" id="KM3-mB-g6L"/>
-                            <constraint firstItem="dtp-4o-iMl" firstAttribute="trailing" secondItem="2oT-Gw-pOB" secondAttribute="trailing" id="Mib-yS-lzY"/>
-                            <constraint firstItem="dcz-DC-bOI" firstAttribute="top" secondItem="dtp-4o-iMl" secondAttribute="bottom" constant="53" id="NgB-8t-Uqa"/>
-                            <constraint firstItem="kBI-zb-Egs" firstAttribute="centerX" secondItem="IS3-co-Vqa" secondAttribute="centerX" id="QEi-wF-ka7"/>
-                            <constraint firstItem="JII-2g-eOH" firstAttribute="centerX" secondItem="dtp-4o-iMl" secondAttribute="centerX" id="WDh-YF-e1D"/>
-                            <constraint firstItem="kBI-zb-Egs" firstAttribute="leading" secondItem="t7Z-VI-e84" secondAttribute="leading" constant="81" id="fwj-1e-uQG"/>
-                            <constraint firstItem="IS3-co-Vqa" firstAttribute="top" secondItem="kBI-zb-Egs" secondAttribute="bottom" constant="84" id="nzm-SX-YEj"/>
-                            <constraint firstItem="JII-2g-eOH" firstAttribute="centerX" secondItem="dcz-DC-bOI" secondAttribute="centerX" id="oc5-Wh-LWp"/>
-                            <constraint firstItem="IS3-co-Vqa" firstAttribute="leading" secondItem="t7Z-VI-e84" secondAttribute="leading" constant="149" id="qgd-xP-PF7"/>
-                            <constraint firstItem="t7Z-VI-e84" firstAttribute="bottom" secondItem="IS3-co-Vqa" secondAttribute="bottom" constant="132" id="xDd-Z7-C8a"/>
-                            <constraint firstItem="kBI-zb-Egs" firstAttribute="top" secondItem="2oT-Gw-pOB" secondAttribute="bottom" constant="20" id="z99-Db-bvm"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t7Z-VI-e84"/>
                     </view>
                     <connections>
