@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AccountOverviewViewController: UIViewController {
 
@@ -18,5 +19,28 @@ class AccountOverviewViewController: UIViewController {
     
     @IBAction func unwindFromAccountEdit(segue: UIStoryboardSegue) {
     }
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
 
+    var listings : [NSManagedObject] = []
+    
+    //Return the number of rows in the table as the number of items found in the listings array
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listings.count
+    }
+    
+    //Dequeue table view cell and populate them with the corresponding NSManagedObject
+    func tableView(_ tablView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let book = listings[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = book.value(forKeyPath: "title") as? String
+        return cell
+    }
+    
+    
+    
+    
 }

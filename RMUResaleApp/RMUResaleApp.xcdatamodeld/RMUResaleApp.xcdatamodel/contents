@@ -10,7 +10,7 @@
     <entity name="Books" representedClassName="Books" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="seller" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sellerUsername" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
