@@ -31,7 +31,7 @@
 		238A09C92262293300455615 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		238A09CB2262299900455615 /* TextbookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookSearchViewController.swift; sourceTree = "<group>"; };
 		DABBB17A226659A600183840 /* AccountOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOverviewViewController.swift; sourceTree = "<group>"; };
-		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RMULaunchScreen.png; sourceTree = "<group>"; };
+		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */

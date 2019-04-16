@@ -35,6 +35,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="0.97870697008614183" blue="0.99410776434857651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qtv-W0-R5V" kind="show" id="sT8-TN-sxH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RMU Resale App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjW-vZ-gM8">
                                 <rect key="frame" x="7" y="252" width="400" height="56"/>
@@ -84,7 +87,6 @@
                         <outlet property="passwordField" destination="iGk-6E-r6j" id="uZj-p9-gzD"/>
                         <outlet property="usernameField" destination="TMQ-Bf-6vO" id="fC9-jg-XYW"/>
                         <outlet property="warningLabel" destination="n6d-Af-VxK" id="weD-06-8dj"/>
-                        <segue destination="qtv-W0-R5V" kind="show" identifier="createAccountSegue" id="LeE-3r-xNl"/>
                         <segue destination="neW-Gc-4af" kind="show" identifier="loginSegue" id="Bkg-qH-wgJ"/>
                     </connections>
                 </viewController>

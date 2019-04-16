@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class AccountViewController: UIViewController, UITextFieldDelegate {
     
     let blankWarning: String = "Fill in All Fields"
     let mismatchPasswordWarning: String = "Passwords do not match"
+    
+    var items: [NSManagedObject] = []
 
     @IBOutlet weak var newFirstnameField: UITextField!
     @IBOutlet weak var newLastnameField: UITextField!
@@ -62,6 +65,39 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         else if(self.newPasswordField.text != self.confirmPasswordField.text){
             self.accountWarningLabel.text = mismatchPasswordWarning
         }
+            //Only when all the fields have relevent, matching, good data will the button actually save the data. 
+        else {
+            let firstname = self.newFirstnameField.text!
+            let lastname = self.newLastnameField.text!
+            let email = self.newEmailField.text!
+            let username = self.newUsernameField.text!
+            let password = self.newPasswordField.text!
+            
+            save(firstname, lastname, email, username, password)
+            
+        }
+    }
+    
+    //Function to save the new account data into our core data entity: Accounts
+    func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Accounts", in: managedContext)!
+        
+        let item = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        item.setValue(firstName, forKeyPath: "firstName")
+        item.setValue(lastName, forKeyPath: "lastName")
+        item.setValue(email, forKeyPath: "email")
+        item.setValue(username, forKeyPath: "username")
+        item.setValue(password, forKeyPath: "password")
+        
     }
     
 }
