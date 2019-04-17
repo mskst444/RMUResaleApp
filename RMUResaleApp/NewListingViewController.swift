@@ -13,18 +13,26 @@ class NewListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.newTitle.delegate = self
+        self.newPrice.delegate = self
+        self.newISBN.delegate = self
+        self.newAuthor.delegate = self
+        
+    }
+   
+    let alert = UIAlertController(title: "Invalid Entry", message: "Invalid Entry", preferredStyle: .alert)
+    
+    let closeAlertAction = UIAlertAction(title: "Close", style: .default)
+    
+    alert.addAction(closeAlertAction)
+    
+    if(self.newTitle.text = "" ||
+        self.newPrice.text = "" ||
+        self.newISBN.text = "" ||
+        self.newAuthor.text = "")
+    {
+    present(alert, animated:true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
