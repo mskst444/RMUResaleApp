@@ -220,7 +220,7 @@
         <!--New Listing-->
         <scene sceneID="rkX-qA-ov4">
             <objects>
-                <viewController title="New Listing" id="Uzk-8Q-Ns9" sceneMemberID="viewController">
+                <viewController title="New Listing" id="Uzk-8Q-Ns9" customClass="NewBookViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sdt-YT-xKj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +287,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
+                                    <action selector="createListing:" destination="Uzk-8Q-Ns9" eventType="touchUpInside" id="6tn-U7-HRt"/>
+                                    <action selector="newListing:" destination="Uzk-8Q-Ns9" eventType="touchUpInside" id="hur-iT-Rzi"/>
                                     <segue destination="r78-h1-kHX" kind="unwind" unwindAction="unwindFromAccountEditWithSegue:" id="Gid-FI-hWm"/>
                                 </connections>
                             </button>
@@ -297,10 +299,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-Mf-4cF">
+                                <rect key="frame" x="55" y="287" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="h2b-5E-x8M"/>
                     </view>
+                    <connections>
+                        <outlet property="displayEmail" destination="Mk6-UA-8Vf" id="8LB-Hi-wkS"/>
+                        <outlet property="displayName" destination="hdn-LY-VqS" id="Fz6-ng-pWH"/>
+                        <outlet property="newAuthor" destination="hjf-5G-ZeR" id="EWp-xA-oY0"/>
+                        <outlet property="newISBN" destination="evP-kH-ptu" id="0D4-NF-xzp"/>
+                        <outlet property="newPrice" destination="sgg-Mf-4cF" id="FUI-ES-Xj9"/>
+                        <outlet property="newTitle" destination="p6N-aO-7ha" id="xgG-Zh-GOF"/>
+                        <outlet property="title" destination="p6N-aO-7ha" id="6N6-ZL-q5x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLW-7N-A6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="r78-h1-kHX" userLabel="Exit" sceneMemberID="exit"/>
