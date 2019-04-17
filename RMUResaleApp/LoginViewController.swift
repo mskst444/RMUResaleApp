@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -45,16 +46,83 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func loginButton(_ sender: Any) {
+
         if(self.passwordField.text == "" || self.usernameField.text == "") {
             self.warningLabel.text = blankFields
         }
-        else{
-            performSegue(withIdentifier: "loginSegue", sender: sender)
+        else {
+            let username = self.usernameField.text!
+            if(myFetchRequest(username: username)){
+                performSegue(withIdentifier: "loginSegue", sender: sender)
+            }
+            else{
+                self.warningLabel.text = wrongUsername
+            }
         }
     }
     @IBAction func unwindToVC(segue: UIStoryboardSegue){
         
     }
+    
+    //Function to search Core Data for matching usernames
+    func myFetchRequest(username: String) -> Bool
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return false
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let myRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
+        
+        myRequest.predicate = NSPredicate(format: "username = %@", username)
+        
+        do{
+            let results = try managedContext.fetch(myRequest)
+            
+            for result in results
+            {
+                let usernameCheck = result.value(forKey: "username")!
+                let stringUsernameCheck = "\(usernameCheck)"
+                if (username == stringUsernameCheck){
+                    return true
+                    print("YAY")
+                }
+                else{
+                    return false
+                }
+            }
+            
+        } catch let error{
+            print(error)
+            return false
+        }
+        return false
+    }
+    /*
+     func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
+     {
+     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+     {
+     return
+     }
+     
+     let managedContext = appDelegate.persistentContainer.viewContext
+     
+     let entity = NSEntityDescription.entity(forEntityName: "Accounts", in: managedContext)!
+     
+     let item = NSManagedObject(entity: entity, insertInto: managedContext)
+     
+     item.setValue(firstName, forKeyPath: "firstName")
+     item.setValue(lastName, forKeyPath: "lastName")
+     item.setValue(email, forKeyPath: "email")
+     item.setValue(username, forKeyPath: "username")
+     item.setValue(password, forKeyPath: "password")
+     
+     }
+     
+ */
     
 }
 
