@@ -10,11 +10,12 @@
     <entity name="Books" representedClassName="Books" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sellerUsername" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Accounts" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Books" positionX="-54" positionY="18" width="128" height="105"/>
+        <element name="Books" positionX="-54" positionY="18" width="128" height="120"/>
     </elements>
 </model>

@@ -23,7 +23,8 @@ class AccountOverviewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    
+    
     var listings : [NSManagedObject] = []
     
     //Return the number of rows in the table as the number of items found in the listings array
