@@ -15,6 +15,8 @@ class AccountOverviewViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
     }
     
     @IBAction func unwindFromAccountEdit(segue: UIStoryboardSegue) {
@@ -39,6 +41,8 @@ class AccountOverviewViewController: UIViewController {
         cell.textLabel?.text = book.value(forKeyPath: "title") as? String
         return cell
     }
+    
+    
     
     
     

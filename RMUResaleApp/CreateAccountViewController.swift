@@ -64,6 +64,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         }
         else if(self.newPasswordField.text != self.confirmPasswordField.text){
             self.accountWarningLabel.text = mismatchPasswordWarning
+            confirmPasswordField.textColor = UIColor.red
         }
             //Only when all the fields have relevent, matching, good data will the button actually save the data. 
         else {
@@ -73,7 +74,11 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             let username = self.newUsernameField.text!
             let password = self.newPasswordField.text!
             
+            //save new account information to Accounts entity
             save(firstname, lastname, email, username, password)
+            
+            //segue back to login page
+            performSegue(withIdentifier: "returnToLogin", sender: sender)
             
         }
     }
