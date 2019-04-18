@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tapRecognizer)
+
     }
     
     //Method for dismissing keyboard with return key
@@ -88,9 +89,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let usernameCheck = result.value(forKey: "username")!
                 let stringUsernameCheck = "\(usernameCheck)"
                 if (username == stringUsernameCheck){
-                    print("YAY")
-                    print("username \(username)")
-                    print(stringUsernameCheck)
                     return true
                 }
                 else{

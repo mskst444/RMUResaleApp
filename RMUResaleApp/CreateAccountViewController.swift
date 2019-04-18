@@ -62,11 +62,14 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         {
             self.accountWarningLabel.text = blankWarning
         }
+        //
         else if(self.newPasswordField.text != self.confirmPasswordField.text){
             self.accountWarningLabel.text = mismatchPasswordWarning
             confirmPasswordField.textColor = UIColor.red
         }
-            //Only when all the fields have relevent, matching, good data will the button actually save the data. 
+            
+        //*******SAVE ACCOUNT DATA INTO ACCOUNTS ENTITY*******
+        //Only when all the fields have relevent, matching, good data will the button actually save the data.
         else {
             let firstname = self.newFirstnameField.text!
             let lastname = self.newLastnameField.text!
@@ -83,7 +86,10 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //Function to save the new account data into our core data entity: Accounts
+    
+    
+    //********************       Save Function       *******************
+    //     Function to save the new account data into our core data entity: Accounts
     
     func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
     {
