@@ -13,10 +13,11 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     
     let blankWarning: String = "Fill in All Fields"
     let mismatchPasswordWarning: String = "Passwords do not match"
-    let takenPasswordWarning: String = "Username Already Taken, Try Another"
+    let takenUsernameWarning: String = "Username Already Taken, Try Another"
+    let takenEmailWarning: String = "Email Already Used, Try Another"
     
     var items: [NSManagedObject] = []
-
+    
     @IBOutlet weak var newFirstnameField: UITextField!
     @IBOutlet weak var newLastnameField: UITextField!
     @IBOutlet weak var newEmailField: UITextField!
@@ -27,7 +28,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.newFirstnameField.delegate = self
         self.newLastnameField.delegate = self
@@ -38,7 +39,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         self.accountWarningLabel.text = ""
     }
     
-
+    
     //Method for dismissing keyboard with return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -54,6 +55,8 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func createAccountButton(_ sender: Any) {
         self.accountWarningLabel.text = ""
+        
+        //CHECK: Any empty fields
         if(self.newFirstnameField.text == "" ||
             self.newLastnameField.text == "" ||
             self.newEmailField.text == "" ||
@@ -63,14 +66,14 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         {
             self.accountWarningLabel.text = blankWarning
         }
-        //checks to see if new password is the same as the confirmed password.
+            //CHECK: new password == confirmed password.
         else if(self.newPasswordField.text != self.confirmPasswordField.text){
             self.accountWarningLabel.text = mismatchPasswordWarning
             confirmPasswordField.textColor = UIColor.red
         }
             
-        //*******SAVE ACCOUNT DATA INTO ACCOUNTS ENTITY*******
-        //Only when all the fields have relevent, matching, good data will the button actually save the data.
+            //*******SAVE ACCOUNT DATA INTO ACCOUNTS ENTITY*******
+            //Only when all the fields have relevent, matching, good data will the button actually save the data.
         else {
             let firstname = self.newFirstnameField.text!
             let lastname = self.newLastnameField.text!
@@ -78,12 +81,14 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             let username = self.newUsernameField.text!
             let password = self.newPasswordField.text!
             
-            //save new account information to Accounts entity
-            self.save(firstname, lastname, email, username, password)
-            
-            //segue back to login page
-            performSegue(withIdentifier: "returnToLogin", sender: sender)
-            
+            //CHECK: username != any other username in database
+            if(myFetchRequest(username: username, email: email) == true){
+                //save new account information to Accounts entity
+                self.save(firstname, lastname, email, username, password)
+                
+                //segue back to login page
+                performSegue(withIdentifier: "returnToLogin", sender: sender)
+            }
         }
     }
     
@@ -114,10 +119,10 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //**************     CHECKING FOR USERNAME ALREADY TAKEN     *******************
+    //**************     CHECKING FOR USERNAME OR EMAIL ALREADY TAKEN     *******************
     
-    //Function to search Core Data for matching usernames
-    func myFetchRequest(username: String) -> Bool
+    //Function to search Core Data for matching usernames/emails
+    func myFetchRequest(username: String, email: String) -> Bool
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
@@ -126,32 +131,63 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let myRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
+        let myUsernameRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
+        let myEmailRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
         
-        myRequest.predicate = NSPredicate(format: "username = %@", username)
+        myUsernameRequest.predicate = NSPredicate(format: "username = %@", username)
+        myEmailRequest.predicate = NSPredicate(format: "email = %@", email)
         
+        // BEGIN USERNAME CONFIRMATION
         do{
-            let results = try managedContext.fetch(myRequest)
+            let userResults = try managedContext.fetch(myUsernameRequest)
             
-            for result in results
+            for userResult in userResults
             {
-                let usernameCheck = "\(result.value(forKey: "username")!)"
+                /* NOTE:
+                 If there are results, this for loop will be entered and thus there is already a record with the attempted username
+                 If there is no identical username already created, this loop will not even run once
+                 */
+                
+                let usernameCheck = "\(userResult.value(forKey: "username")!)"
                 //let passwordCheck = "\(result.value(forKey: "password")!)"
-                if (username != usernameCheck){
-                    Username.userMaster = username
-                    return true
-                }
-                else{
-                    return false
-                }
+                print("DATABASE RESULT: \(usernameCheck)")
+                print("TEXTFIELD ENTRY: \(username)")
+                self.accountWarningLabel.text = takenUsernameWarning
+                return false
             }
             
         } catch let error{
             print(error)
             return false
         }
-        return false
+        
+        // BEGIN EMAIL CONFIRMATION
+        do
+        {
+            let emailResults = try managedContext.fetch(myEmailRequest)
+            
+            for emailResult in emailResults
+            {
+                /* NOTE:
+                 If there are results, this for loop will be entered and thus there is already a record with the attempted username
+                 If there is no identical username already created, this loop will not even run once
+                 */
+                
+                let emailCheck = "\(emailResult.value(forKey: "email")!)"
+                print("DATABASE RESULT: \(emailCheck)")
+                print("TEXTFIELD ENTRY: \(email)")
+                self.accountWarningLabel.text = takenEmailWarning
+                return false
+            }
+        }
+        catch let error
+        {
+            print(error)
+            return false
+        }
+        
+        return true
     }
- 
+    
     
 }
