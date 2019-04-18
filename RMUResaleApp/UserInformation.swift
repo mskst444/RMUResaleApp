@@ -18,7 +18,7 @@ class UserInformation
     var userFirstName: String
     var userLastName: String
     
-    public func userFetchRequest(username: String)
+    func userFetchRequest(username: String)
     {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else

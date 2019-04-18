@@ -19,10 +19,6 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayEmail: UILabel!
     
-
-    let sellerName = UserInformation()
-    sellerName.userFetchRequest(Username.userMaster)
-    
     let alert = UIAlertController(title: "Invalid Entry", message: "Invalid Entry. Required Fields Missing", preferredStyle: .alert)
     let closeAction = UIAlertAction(title: "Close", style: .default)
     
@@ -35,10 +31,15 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         self.newPrice.delegate = self
         self.newISBN.delegate  = self
         self.newAuthor.delegate = self
+        
     }
     
     
     @IBAction func newListing(_ sender: Any) {
+        let getUser = UserInformation()
+        getUser.userFetchRequest(username: Username.userMaster)
+        let seller = getUser.userName
+        
         if(self.newTitle.text == "" ||
             self.newPrice.text == "" ||
             self.newISBN.text == "" ||
@@ -50,15 +51,15 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         else
         {
             let newTitle = self.newTitle.text!
-            let priceNum = Int(newPrice.text!)!
+            let priceNum = Double(newPrice.text!)!
             let newISBN = self.newISBN.text!
             let newAuthor = self.newAuthor.text!
             
-            save(newTitle, priceNum, newISBN, newAuthor)
+            save(newTitle, priceNum, newISBN, newAuthor, seller)
         }
     }
     
-    func save(_ newTitle: String, _ priceNum: Int, _ newISBN: String, _ newAuthor: String)
+    func save(_ newTitle: String, _ priceNum: Double, _ newISBN: String, _ newAuthor: String, _ seller: String)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
@@ -73,6 +74,7 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         book.setValue(priceNum, forKeyPath: "price")
         book.setValue(newISBN, forKeyPath: "isbn")
         book.setValue(newAuthor, forKeyPath: "author")
+        book.setValue(seller, forKeyPath: "sellerUsername")
     }
     
 }
