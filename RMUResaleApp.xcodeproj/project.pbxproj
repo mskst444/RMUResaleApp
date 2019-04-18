@@ -19,8 +19,8 @@
 		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
 		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
 		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
-		DACCF0882267E1DB00357C75 /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCF0872267E1DB00357C75 /* NewBookViewController.swift */; };
 		DAFD94A42268071100311A7C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A32268071100311A7C /* UserInformation.swift */; };
+		DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A522680EFC00311A7C /* NewBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
-		DACCF0872267E1DB00357C75 /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
 		DAFD94A32268071100311A7C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		DAFD94A522680EFC00311A7C /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBookViewController.swift; path = ../NewBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,24 +79,16 @@
 				238A09CB2262299900455615 /* TextbookSearchViewController.swift */,
 				DABBB17A226659A600183840 /* AccountOverviewViewController.swift */,
 				023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */,
-				DACCF0872267E1DB00357C75 /* NewBookViewController.swift */,
+				DAFD94A32268071100311A7C /* UserInformation.swift */,
+				DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
 				235179152262477100221E24 /* Main.storyboard */,
 				DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
 				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
 				DABBB17C22665DF800183840 /* RMULaunchScreen.png */,
 				2381B90522558A17002BDA2C /* Info.plist */,
-				DAFD94A2226806FD00311A7C /* Reference Classes */,
 			);
 			path = RMUResaleApp;
-			sourceTree = "<group>";
-		};
-		DAFD94A2226806FD00311A7C /* Reference Classes */ = {
-			isa = PBXGroup;
-			children = (
-				DAFD94A32268071100311A7C /* UserInformation.swift */,
-			);
-			path = "Reference Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +167,11 @@
 				DABBB17B226659A600183840 /* AccountOverviewViewController.swift in Sources */,
 				2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */,
 				2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */,
-				DACCF0882267E1DB00357C75 /* NewBookViewController.swift in Sources */,
 				DAFD94A42268071100311A7C /* UserInformation.swift in Sources */,
 				238A09CC2262299900455615 /* TextbookSearchViewController.swift in Sources */,
 				238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */,
 				DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */,
+				DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */,
 				DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
