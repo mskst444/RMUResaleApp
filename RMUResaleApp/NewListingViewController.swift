@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewListingViewController: UIViewController {
+class NewListingViewController: UIViewController, UITextField {
 
     override func viewDidLoad() {
         super.viewDidLoad()

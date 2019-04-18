@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */; };
+		159FFE892267E92100C1A767 /* CoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159FFE882267E92100C1A767 /* CoreDataFunctions.swift */; };
 		235179162262477100221E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235179152262477100221E24 /* Main.storyboard */; };
 		2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8F922558A12002BDA2C /* AppDelegate.swift */; };
 		2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8FB22558A12002BDA2C /* LoginViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		159FFE882267E92100C1A767 /* CoreDataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFunctions.swift; sourceTree = "<group>"; };
 		235179152262477100221E24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2381B8F622558A12002BDA2C /* RMUResaleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMUResaleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381B8F922558A12002BDA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				2381B8F922558A12002BDA2C /* AppDelegate.swift */,
 				2381B8FB22558A12002BDA2C /* LoginViewController.swift */,
 				238A09C92262293300455615 /* CreateAccountViewController.swift */,
+				159FFE882267E92100C1A767 /* CoreDataFunctions.swift */,
 				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
 				238A09CB2262299900455615 /* TextbookSearchViewController.swift */,
 				DABBB17A226659A600183840 /* AccountOverviewViewController.swift */,
@@ -166,6 +169,7 @@
 				2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */,
 				DACCF0882267E1DB00357C75 /* NewBookViewController.swift in Sources */,
 				238A09CC2262299900455615 /* TextbookSearchViewController.swift in Sources */,
+				159FFE892267E92100C1A767 /* CoreDataFunctions.swift in Sources */,
 				238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */,
 				DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */,
 				DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */,

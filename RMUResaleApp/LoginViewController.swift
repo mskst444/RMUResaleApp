@@ -11,6 +11,7 @@ import CoreData
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    var items: [NSManagedObject] = []
     let wrongUsername: String = "Invalid Username"
     let wrongPassword: String = "Invalid Password"
     let blankFields: String = "Enter Username and Password"
@@ -52,7 +53,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             let username = self.usernameField.text!
-            if(myFetchRequest(username: username)){
+            if(myFetchRequest(username: username) == true){
+                print("It's true")
                 performSegue(withIdentifier: "loginSegue", sender: sender)
             }
             else{
@@ -86,8 +88,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let usernameCheck = result.value(forKey: "username")!
                 let stringUsernameCheck = "\(usernameCheck)"
                 if (username == stringUsernameCheck){
-                    return true
                     print("YAY")
+                    print("username \(username)")
+                    print(stringUsernameCheck)
+                    return true
                 }
                 else{
                     return false
@@ -100,7 +104,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    /*
+    
      func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
      {
      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
@@ -122,7 +126,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
      
      }
      
- */
+ 
     
 }
 

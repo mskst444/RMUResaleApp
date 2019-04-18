@@ -75,7 +75,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             let password = self.newPasswordField.text!
             
             //save new account information to Accounts entity
-            save(firstname, lastname, email, username, password)
+            self.save(firstname, lastname, email, username, password)
             
             //segue back to login page
             performSegue(withIdentifier: "returnToLogin", sender: sender)
@@ -84,6 +84,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     //Function to save the new account data into our core data entity: Accounts
+    
     func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
@@ -104,5 +105,6 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         item.setValue(password, forKeyPath: "password")
         
     }
+ 
     
 }

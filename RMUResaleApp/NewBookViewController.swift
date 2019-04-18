@@ -29,7 +29,7 @@ class NewBookViewController: UIViewController, UITextFieldDelegate {
         self.newAuthor.delegate = self
     }
     
-    let 
+    
     
     
     
