@@ -13,6 +13,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     
     let blankWarning: String = "Fill in All Fields"
     let mismatchPasswordWarning: String = "Passwords do not match"
+    let takenPasswordWarning: String = "Username Already Taken, Try Another"
     
     var items: [NSManagedObject] = []
 
@@ -62,7 +63,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         {
             self.accountWarningLabel.text = blankWarning
         }
-        //
+        //checks to see if new password is the same as the confirmed password.
         else if(self.newPasswordField.text != self.confirmPasswordField.text){
             self.accountWarningLabel.text = mismatchPasswordWarning
             confirmPasswordField.textColor = UIColor.red
@@ -110,6 +111,46 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         item.setValue(username, forKeyPath: "username")
         item.setValue(password, forKeyPath: "password")
         
+    }
+    
+    
+    //**************     CHECKING FOR USERNAME ALREADY TAKEN     *******************
+    
+    //Function to search Core Data for matching usernames
+    func myFetchRequest(username: String) -> Bool
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return false
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let myRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
+        
+        myRequest.predicate = NSPredicate(format: "username = %@", username)
+        
+        do{
+            let results = try managedContext.fetch(myRequest)
+            
+            for result in results
+            {
+                let usernameCheck = "\(result.value(forKey: "username")!)"
+                //let passwordCheck = "\(result.value(forKey: "password")!)"
+                if (username != usernameCheck){
+                    Username.userMaster = username
+                    return true
+                }
+                else{
+                    return false
+                }
+            }
+            
+        } catch let error{
+            print(error)
+            return false
+        }
+        return false
     }
  
     
