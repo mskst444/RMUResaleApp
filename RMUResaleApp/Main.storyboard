@@ -287,7 +287,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
-                                    <action selector="createListing:" destination="Uzk-8Q-Ns9" eventType="touchUpInside" id="6tn-U7-HRt"/>
                                     <action selector="newListing:" destination="Uzk-8Q-Ns9" eventType="touchUpInside" id="hur-iT-Rzi"/>
                                     <segue destination="r78-h1-kHX" kind="unwind" unwindAction="unwindFromAccountEditWithSegue:" id="Gid-FI-hWm"/>
                                 </connections>
@@ -317,7 +316,6 @@
                         <outlet property="newISBN" destination="evP-kH-ptu" id="0D4-NF-xzp"/>
                         <outlet property="newPrice" destination="sgg-Mf-4cF" id="FUI-ES-Xj9"/>
                         <outlet property="newTitle" destination="p6N-aO-7ha" id="xgG-Zh-GOF"/>
-                        <outlet property="title" destination="p6N-aO-7ha" id="6N6-ZL-q5x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLW-7N-A6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
