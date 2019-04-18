@@ -58,19 +58,31 @@ class AccountOverviewTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let data = cellData[indexPath.row]
+        let cellidentifier = "AccountOverviewTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellidentifier, for: indexPath) as?
+            AccountOverviewTableViewCell else
+            {
+                fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
+            }
+        
+        cell.titleLabel.text = data.value(forKeyPath: "title") as? String
+        cell.priceLabel.text = data.value(forKeyPath: "price") as? String
+        cell.authorLabel.text = data.value(forKeyPath: "author") as? String
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

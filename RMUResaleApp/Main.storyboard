@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RMU Resale App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjW-vZ-gM8">
-                                <rect key="frame" x="7" y="252" width="400" height="56"/>
+                                <rect key="frame" x="7" y="156" width="400" height="56"/>
                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="50"/>
                                 <color key="textColor" red="0.89010945431472077" green="0.13315219504745407" blue="0.0076903529959254976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="516" y="869"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Account Overview Table View Controller-->
         <scene sceneID="tW1-ga-gCq">
             <objects>
-                <tableViewController id="577-Bj-zUy" sceneMemberID="viewController">
+                <tableViewController id="577-Bj-zUy" customClass="AccountOverviewTableViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LfU-Fg-WIF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,6 +417,9 @@
                                 <rect key="frame" x="145" y="433" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Account Overview"/>
+                                <connections>
+                                    <segue destination="577-Bj-zUy" kind="show" id="zw3-aZ-ivf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIw-cU-xVd">
                                 <rect key="frame" x="145" y="483" width="125" height="36"/>
@@ -444,7 +447,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9XU-Lr-BbS">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -462,10 +465,10 @@
             </objects>
             <point key="canvasLocation" x="516" y="1659"/>
         </scene>
-        <!--View Controller-->
+        <!--Listing View Controller-->
         <scene sceneID="xbw-9H-KV9">
             <objects>
-                <viewController id="Fut-lK-AyH" sceneMemberID="viewController">
+                <viewController id="Fut-lK-AyH" customClass="ListingViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DOj-pp-rMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -615,6 +618,6 @@
         <image name="BookImage1" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mx0-ff-9oP"/>
+        <segue reference="gLw-mB-VlG"/>
     </inferredMetricsTieBreakers>
 </document>
