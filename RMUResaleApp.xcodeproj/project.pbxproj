@@ -1,388 +1,383 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 50;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 50;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */; };
-		235179162262477100221E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235179152262477100221E24 /* Main.storyboard */; };
-		2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8F922558A12002BDA2C /* AppDelegate.swift */; };
-		2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8FB22558A12002BDA2C /* LoginViewController.swift */; };
-		2381B90122558A17002BDA2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2381B90022558A17002BDA2C /* Assets.xcassets */; };
-		2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381B90222558A17002BDA2C /* LaunchScreen.storyboard */; };
-		238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A09C92262293300455615 /* CreateAccountViewController.swift */; };
-		238A09CC2262299900455615 /* TextbookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A09CB2262299900455615 /* TextbookSearchViewController.swift */; };
-		DA9EB6AC22691E120042B5B1 /* AccountOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9EB6AB22691E120042B5B1 /* AccountOverviewTableViewCell.swift */; };
-		DA9EB6B0226927E90042B5B1 /* AccountOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9EB6AF226927E90042B5B1 /* AccountOverviewTableViewController.swift */; };
-		DA9EB6B22269380A0042B5B1 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9EB6B12269380A0042B5B1 /* ListingViewController.swift */; };
-		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
-		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
-		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
-		DAFD94A42268071100311A7C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A32268071100311A7C /* UserInformation.swift */; };
-		DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A522680EFC00311A7C /* NewBookViewController.swift */; };
+        023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */; };
+        235179162262477100221E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235179152262477100221E24 /* Main.storyboard */; };
+        2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8F922558A12002BDA2C /* AppDelegate.swift */; };
+        2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8FB22558A12002BDA2C /* LoginViewController.swift */; };
+        2381B90122558A17002BDA2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2381B90022558A17002BDA2C /* Assets.xcassets */; };
+        2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2381B90222558A17002BDA2C /* LaunchScreen.storyboard */; };
+        238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A09C92262293300455615 /* CreateAccountViewController.swift */; };
+		238A09CC2262299900455615 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A09CB2262299900455615 /* SearchViewController.swift */; };
+		DABBB17B226659A600183840 /* AccountOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB17A226659A600183840 /* AccountOverviewViewController.swift */; };
+        DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
+        DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
+        DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
+        DAFD94A42268071100311A7C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A32268071100311A7C /* UserInformation.swift */; };
+        DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A522680EFC00311A7C /* NewBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
-		235179152262477100221E24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2381B8F622558A12002BDA2C /* RMUResaleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMUResaleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2381B8F922558A12002BDA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2381B8FB22558A12002BDA2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2381B90022558A17002BDA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2381B90322558A17002BDA2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2381B90522558A17002BDA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		238A09C92262293300455615 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		238A09CB2262299900455615 /* TextbookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookSearchViewController.swift; sourceTree = "<group>"; };
-		DA9EB6AB22691E120042B5B1 /* AccountOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewCell.swift; sourceTree = "<group>"; };
-		DA9EB6AF226927E90042B5B1 /* AccountOverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewController.swift; sourceTree = "<group>"; };
-		DA9EB6B12269380A0042B5B1 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
-		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
-		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
-		DAFD94A32268071100311A7C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
-		DAFD94A522680EFC00311A7C /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBookViewController.swift; path = ../NewBookViewController.swift; sourceTree = "<group>"; };
+        023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		15E4EA6822692FC20037149E /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
+        235179152262477100221E24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+        2381B8F622558A12002BDA2C /* RMUResaleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMUResaleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        2381B8F922558A12002BDA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        2381B8FB22558A12002BDA2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+        2381B90022558A17002BDA2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        2381B90322558A17002BDA2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        2381B90522558A17002BDA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        238A09C92262293300455615 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		238A09CB2262299900455615 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DABBB17A226659A600183840 /* AccountOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOverviewViewController.swift; sourceTree = "<group>"; };
+        DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
+        DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+        DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
+        DAFD94A32268071100311A7C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+        DAFD94A522680EFC00311A7C /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBookViewController.swift; path = ../NewBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2381B8F322558A12002BDA2C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        2381B8F322558A12002BDA2C /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2381B8ED22558A12002BDA2C = {
-			isa = PBXGroup;
-			children = (
-				2381B8F822558A12002BDA2C /* RMUResaleApp */,
-				2381B8F722558A12002BDA2C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		2381B8F722558A12002BDA2C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2381B8F622558A12002BDA2C /* RMUResaleApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2381B8F822558A12002BDA2C /* RMUResaleApp */ = {
-			isa = PBXGroup;
-			children = (
-				2381B8F922558A12002BDA2C /* AppDelegate.swift */,
-				2381B8FB22558A12002BDA2C /* LoginViewController.swift */,
-				238A09C92262293300455615 /* CreateAccountViewController.swift */,
-				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
-				238A09CB2262299900455615 /* TextbookSearchViewController.swift */,
-				DA9EB6AF226927E90042B5B1 /* AccountOverviewTableViewController.swift */,
-				DA9EB6AB22691E120042B5B1 /* AccountOverviewTableViewCell.swift */,
-				DA9EB6B12269380A0042B5B1 /* ListingViewController.swift */,
-				023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */,
-				DAFD94A32268071100311A7C /* UserInformation.swift */,
-				DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
-				235179152262477100221E24 /* Main.storyboard */,
-				DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
-				2381B90022558A17002BDA2C /* Assets.xcassets */,
-				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
-				DABBB17C22665DF800183840 /* RMULaunchScreen.png */,
-				2381B90522558A17002BDA2C /* Info.plist */,
-			);
-			path = RMUResaleApp;
-			sourceTree = "<group>";
-		};
+        2381B8ED22558A12002BDA2C = {
+            isa = PBXGroup;
+            children = (
+                2381B8F822558A12002BDA2C /* RMUResaleApp */,
+                2381B8F722558A12002BDA2C /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        2381B8F722558A12002BDA2C /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                2381B8F622558A12002BDA2C /* RMUResaleApp.app */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        2381B8F822558A12002BDA2C /* RMUResaleApp */ = {
+            isa = PBXGroup;
+            children = (
+                2381B8F922558A12002BDA2C /* AppDelegate.swift */,
+                15E4EA6822692FC20037149E /* 1024x1024.png */,
+                2381B8FB22558A12002BDA2C /* LoginViewController.swift */,
+                238A09C92262293300455615 /* CreateAccountViewController.swift */,
+                DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
+				238A09CB2262299900455615 /* SearchViewController.swift */,
+				DABBB17A226659A600183840 /* AccountOverviewViewController.swift */,
+                023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */,
+                DAFD94A32268071100311A7C /* UserInformation.swift */,
+                DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
+                235179152262477100221E24 /* Main.storyboard */,
+                DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
+                2381B90022558A17002BDA2C /* Assets.xcassets */,
+                2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
+                DABBB17C22665DF800183840 /* RMULaunchScreen.png */,
+                2381B90522558A17002BDA2C /* Info.plist */,
+            );
+            path = RMUResaleApp;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2381B8F522558A12002BDA2C /* RMUResaleApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2381B90822558A17002BDA2C /* Build configuration list for PBXNativeTarget "RMUResaleApp" */;
-			buildPhases = (
-				2381B8F222558A12002BDA2C /* Sources */,
-				2381B8F322558A12002BDA2C /* Frameworks */,
-				2381B8F422558A12002BDA2C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RMUResaleApp;
-			productName = RMUResaleApp;
-			productReference = 2381B8F622558A12002BDA2C /* RMUResaleApp.app */;
-			productType = "com.apple.product-type.application";
-		};
+        2381B8F522558A12002BDA2C /* RMUResaleApp */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 2381B90822558A17002BDA2C /* Build configuration list for PBXNativeTarget "RMUResaleApp" */;
+            buildPhases = (
+                2381B8F222558A12002BDA2C /* Sources */,
+                2381B8F322558A12002BDA2C /* Frameworks */,
+                2381B8F422558A12002BDA2C /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = RMUResaleApp;
+            productName = RMUResaleApp;
+            productReference = 2381B8F622558A12002BDA2C /* RMUResaleApp.app */;
+            productType = "com.apple.product-type.application";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2381B8EE22558A12002BDA2C /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Mitchell Keller";
-				TargetAttributes = {
-					2381B8F522558A12002BDA2C = {
-						CreatedOnToolsVersion = 10.1;
-					};
-				};
-			};
-			buildConfigurationList = 2381B8F122558A12002BDA2C /* Build configuration list for PBXProject "RMUResaleApp" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 2381B8ED22558A12002BDA2C;
-			productRefGroup = 2381B8F722558A12002BDA2C /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				2381B8F522558A12002BDA2C /* RMUResaleApp */,
-			);
-		};
+        2381B8EE22558A12002BDA2C /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastSwiftUpdateCheck = 1010;
+                LastUpgradeCheck = 1010;
+                ORGANIZATIONNAME = "Mitchell Keller";
+                TargetAttributes = {
+                    2381B8F522558A12002BDA2C = {
+                        CreatedOnToolsVersion = 10.1;
+                    };
+                };
+            };
+            buildConfigurationList = 2381B8F122558A12002BDA2C /* Build configuration list for PBXProject "RMUResaleApp" */;
+            compatibilityVersion = "Xcode 9.3";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 2381B8ED22558A12002BDA2C;
+            productRefGroup = 2381B8F722558A12002BDA2C /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                2381B8F522558A12002BDA2C /* RMUResaleApp */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2381B8F422558A12002BDA2C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				235179162262477100221E24 /* Main.storyboard in Resources */,
-				DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
-				2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
-				2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        2381B8F422558A12002BDA2C /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                235179162262477100221E24 /* Main.storyboard in Resources */,
+                DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
+                15E4EA6922692FC20037149E /* 1024x1024.png in Resources */,
+                2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
+                2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2381B8F222558A12002BDA2C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */,
-				2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */,
-				2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */,
-				DA9EB6B22269380A0042B5B1 /* ListingViewController.swift in Sources */,
-				DAFD94A42268071100311A7C /* UserInformation.swift in Sources */,
-				238A09CC2262299900455615 /* TextbookSearchViewController.swift in Sources */,
-				DA9EB6B0226927E90042B5B1 /* AccountOverviewTableViewController.swift in Sources */,
-				238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */,
-				DA9EB6AC22691E120042B5B1 /* AccountOverviewTableViewCell.swift in Sources */,
-				DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */,
-				DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */,
-				DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        2381B8F222558A12002BDA2C /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */,
+				DABBB17B226659A600183840 /* AccountOverviewViewController.swift in Sources */,
+                2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */,
+                2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */,
+                DAFD94A42268071100311A7C /* UserInformation.swift in Sources */,
+				238A09CC2262299900455615 /* SearchViewController.swift in Sources */,
+                238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */,
+                DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */,
+                DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */,
+                DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2381B90222558A17002BDA2C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2381B90322558A17002BDA2C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
+        2381B90222558A17002BDA2C /* LaunchScreen.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                2381B90322558A17002BDA2C /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2381B90622558A17002BDA2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		2381B90722558A17002BDA2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2381B90922558A17002BDA2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RMUResaleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellkeller.RMUResaleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2381B90A22558A17002BDA2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RMUResaleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellkeller.RMUResaleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
+        2381B90622558A17002BDA2C /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+                MTL_FAST_MATH = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            };
+            name = Debug;
+        };
+        2381B90722558A17002BDA2C /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                MTL_FAST_MATH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_COMPILATION_MODE = wholemodule;
+                SWIFT_OPTIMIZATION_LEVEL = "-O";
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        2381B90922558A17002BDA2C /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = RMUResaleApp/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = com.mitchellkeller.RMUResaleApp;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        2381B90A22558A17002BDA2C /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                INFOPLIST_FILE = RMUResaleApp/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = com.mitchellkeller.RMUResaleApp;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2381B8F122558A12002BDA2C /* Build configuration list for PBXProject "RMUResaleApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2381B90622558A17002BDA2C /* Debug */,
-				2381B90722558A17002BDA2C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2381B90822558A17002BDA2C /* Build configuration list for PBXNativeTarget "RMUResaleApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2381B90922558A17002BDA2C /* Debug */,
-				2381B90A22558A17002BDA2C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        2381B8F122558A12002BDA2C /* Build configuration list for PBXProject "RMUResaleApp" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                2381B90622558A17002BDA2C /* Debug */,
+                2381B90722558A17002BDA2C /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        2381B90822558A17002BDA2C /* Build configuration list for PBXNativeTarget "RMUResaleApp" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                2381B90922558A17002BDA2C /* Debug */,
+                2381B90A22558A17002BDA2C /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */,
-			);
-			currentVersion = DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */;
-			path = RMUResaleApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
+        DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */ = {
+            isa = XCVersionGroup;
+            children = (
+                DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */,
+            );
+            currentVersion = DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */;
+            path = RMUResaleApp.xcdatamodeld;
+            sourceTree = "<group>";
+            versionGroupType = wrapper.xcdatamodel;
+        };
 /* End XCVersionGroup section */
-	};
-	rootObject = 2381B8EE22558A12002BDA2C /* Project object */;
+    };
+    rootObject = 2381B8EE22558A12002BDA2C /* Project object */;
 }
