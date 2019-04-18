@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */; };
+		151A5A0322683EAE00A45644 /* RMUResaleApp.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 151A5A0022683EAE00A45644 /* RMUResaleApp.sqlite-shm */; };
+		151A5A0422683EAE00A45644 /* RMUResaleApp.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 151A5A0122683EAE00A45644 /* RMUResaleApp.sqlite */; };
+		151A5A0522683EAE00A45644 /* RMUResaleApp.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 151A5A0222683EAE00A45644 /* RMUResaleApp.sqlite-wal */; };
 		235179162262477100221E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235179152262477100221E24 /* Main.storyboard */; };
 		2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8F922558A12002BDA2C /* AppDelegate.swift */; };
 		2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8FB22558A12002BDA2C /* LoginViewController.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		151A5A0022683EAE00A45644 /* RMUResaleApp.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RMUResaleApp.sqlite-shm"; sourceTree = "<group>"; };
+		151A5A0122683EAE00A45644 /* RMUResaleApp.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = RMUResaleApp.sqlite; sourceTree = "<group>"; };
+		151A5A0222683EAE00A45644 /* RMUResaleApp.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RMUResaleApp.sqlite-wal"; sourceTree = "<group>"; };
 		235179152262477100221E24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2381B8F622558A12002BDA2C /* RMUResaleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMUResaleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381B8F922558A12002BDA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				2381B8F922558A12002BDA2C /* AppDelegate.swift */,
+				151A5A0122683EAE00A45644 /* RMUResaleApp.sqlite */,
+				151A5A0022683EAE00A45644 /* RMUResaleApp.sqlite-shm */,
+				151A5A0222683EAE00A45644 /* RMUResaleApp.sqlite-wal */,
 				2381B8FB22558A12002BDA2C /* LoginViewController.swift */,
 				238A09C92262293300455615 /* CreateAccountViewController.swift */,
 				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
@@ -149,10 +158,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151A5A0422683EAE00A45644 /* RMUResaleApp.sqlite in Resources */,
 				235179162262477100221E24 /* Main.storyboard in Resources */,
 				DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
+				151A5A0522683EAE00A45644 /* RMUResaleApp.sqlite-wal in Resources */,
 				2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
 				2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,
+				151A5A0322683EAE00A45644 /* RMUResaleApp.sqlite-shm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

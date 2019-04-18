@@ -34,6 +34,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tapRecognizer)
+        
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print("HERE:")
+        print(paths[0])
+        
+        let URL = NSPersistentContainer.defaultDirectoryURL()
+        print("URL: \(URL)")
 
     }
     
