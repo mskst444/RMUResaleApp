@@ -20,6 +20,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var warningLabel: UILabel!
     
+    
+    
+    //****************     viewDidLoad     *************
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,6 +36,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tapRecognizer)
 
     }
+    
+    
+    
+    
+    //*************      Required Keyboard Function     ****************
     
     //Method for dismissing keyboard with return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,7 +55,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
+    
+    
+    
+    
+    
+    //*************     LOGIN BUTTON ACTION     *************
+    
     @IBAction func loginButton(_ sender: Any) {
 
         if(self.passwordField.text == "" || self.usernameField.text == "") {
@@ -54,7 +69,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             let username = self.usernameField.text!
-            if(myFetchRequest(username: username) == true){
+            let password = self.passwordField.text!
+            if(myFetchRequest(username: username, password: password) == true){
                 print("It's true")
                 performSegue(withIdentifier: "loginSegue", sender: sender)
             }
@@ -63,12 +79,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    @IBAction func unwindToVC(segue: UIStoryboardSegue){
-        
-    }
+    
+    
+    
+    
+    
+    
+
+    //**************     CHECKING FOR USERNAME/PASSWORD MATCH     *******************
     
     //Function to search Core Data for matching usernames
-    func myFetchRequest(username: String) -> Bool
+    func myFetchRequest(username: String, password: String) -> Bool
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
@@ -87,8 +108,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             for result in results
             {
                 let usernameCheck = "\(result.value(forKey: "username")!)"
+                let passwordCheck = "\(result.value(forKey: "password")!)"
                 //let passwordCheck = "\(result.value(forKey: "password")!)"
-                if (username == usernameCheck){
+                if (username == usernameCheck && password == passwordCheck){
+                    Username.userMaster = username
                     return true
                 }
                 else{
@@ -102,29 +125,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    
-     func save(_ firstName: String, _ lastName: String, _ email: String, _ username: String, _ password: String)
-     {
-     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
-     {
-     return
-     }
-     
-     let managedContext = appDelegate.persistentContainer.viewContext
-     
-     let entity = NSEntityDescription.entity(forEntityName: "Accounts", in: managedContext)!
-     
-     let item = NSManagedObject(entity: entity, insertInto: managedContext)
-     
-     item.setValue(firstName, forKeyPath: "firstName")
-     item.setValue(lastName, forKeyPath: "lastName")
-     item.setValue(email, forKeyPath: "email")
-     item.setValue(username, forKeyPath: "username")
-     item.setValue(password, forKeyPath: "password")
-     
-     }
-     
- 
-    
+}
+
+struct Username{
+    static var userMaster = ""
 }
 
