@@ -86,9 +86,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             for result in results
             {
-                let usernameCheck = result.value(forKey: "username")!
-                let stringUsernameCheck = "\(usernameCheck)"
-                if (username == stringUsernameCheck){
+                let usernameCheck = "\(result.value(forKey: "username")!)"
+                //let passwordCheck = "\(result.value(forKey: "password")!)"
+                if (username == usernameCheck){
                     return true
                 }
                 else{
