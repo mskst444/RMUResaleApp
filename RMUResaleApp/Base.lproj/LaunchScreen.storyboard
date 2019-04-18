@@ -18,12 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RMULaunchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-fM-kps">
-                                <rect key="frame" x="-4" y="107" width="379" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-dA-q3J">
+                                <rect key="frame" x="0.0" y="216" width="375" height="235"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RMU Resale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhk-Zs-daV">
+                                <rect key="frame" x="50" y="459" width="293" height="64"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="53"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.015075799624273538" green="0.11584894435059041" blue="0.24024449481865284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.11931227892637253" green="0.15317574143409729" blue="0.68996399641036987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cfj-dA-q3J" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9Cr-v8-CU9"/>
+                            <constraint firstAttribute="trailing" secondItem="cfj-dA-q3J" secondAttribute="trailing" id="C53-lP-3cy"/>
+                            <constraint firstItem="cfj-dA-q3J" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="H8K-P6-k7O"/>
+                            <constraint firstItem="Bhk-Zs-daV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="QsW-ue-adQ"/>
+                            <constraint firstItem="cfj-dA-q3J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="196" id="cPa-iS-hxm"/>
+                            <constraint firstItem="Bhk-Zs-daV" firstAttribute="top" secondItem="cfj-dA-q3J" secondAttribute="bottom" constant="8" symbolic="YES" id="hax-Au-Qec"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RMULaunchScreen.png" width="404" height="442"/>
+        <image name="1024x1024.png" width="1024" height="1024"/>
     </resources>
 </document>
