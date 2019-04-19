@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023D20672267D4E800AC2DD2 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */; };
+		1508A2932269479F003B0081 /* 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 1508A2922269479F003B0081 /* 1024x1024.png */; };
 		235179162262477100221E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235179152262477100221E24 /* Main.storyboard */; };
 		2381B8FA22558A12002BDA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8F922558A12002BDA2C /* AppDelegate.swift */; };
 		2381B8FC22558A12002BDA2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381B8FB22558A12002BDA2C /* LoginViewController.swift */; };
@@ -18,7 +19,6 @@
 		DA0F2EDB226943A4009867DF /* AccountOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */; };
 		DA0F2EDD226943BC009867DF /* AccountOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */; };
 		DA0F2EDF226943D8009867DF /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDE226943D8009867DF /* ListingViewController.swift */; };
-		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
 		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
 		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
 		DAFD94A42268071100311A7C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A32268071100311A7C /* UserInformation.swift */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
-		15E4EA6822692FC20037149E /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
+		1508A2922269479F003B0081 /* 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024x1024.png; sourceTree = "<group>"; };
 		235179152262477100221E24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2381B8F622558A12002BDA2C /* RMUResaleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMUResaleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2381B8F922558A12002BDA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +40,6 @@
 		DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewController.swift; sourceTree = "<group>"; };
 		DA0F2EDE226943D8009867DF /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
-		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
 		DAFD94A32268071100311A7C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
@@ -77,8 +76,8 @@
 		2381B8F822558A12002BDA2C /* RMUResaleApp */ = {
 			isa = PBXGroup;
 			children = (
+				1508A2922269479F003B0081 /* 1024x1024.png */,
 				2381B8F922558A12002BDA2C /* AppDelegate.swift */,
-				15E4EA6822692FC20037149E /* 1024x1024.png */,
 				2381B8FB22558A12002BDA2C /* LoginViewController.swift */,
 				238A09C92262293300455615 /* CreateAccountViewController.swift */,
 				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
@@ -93,7 +92,6 @@
 				DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
 				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
-				DABBB17C22665DF800183840 /* RMULaunchScreen.png */,
 				2381B90522558A17002BDA2C /* Info.plist */,
 			);
 			path = RMUResaleApp;
@@ -158,8 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				235179162262477100221E24 /* Main.storyboard in Resources */,
-				DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
 				2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
+				1508A2932269479F003B0081 /* 1024x1024.png in Resources */,
 				2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

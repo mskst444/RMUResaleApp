@@ -56,6 +56,8 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
             let newAuthor = self.newAuthor.text!
             
             save(newTitle, priceNum, newISBN, newAuthor, seller)
+            checkBooksEntity()
+            
         }
     }
     
@@ -75,6 +77,37 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         book.setValue(newISBN, forKeyPath: "isbn")
         book.setValue(newAuthor, forKeyPath: "author")
         book.setValue(seller, forKeyPath: "sellerUsername")
+    }
+    
+    func checkBooksEntity(){
+        
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let myRequest = NSFetchRequest<NSManagedObject>(entityName: "Books")
+        
+        do{
+            let results = try managedContext.fetch(myRequest)
+            
+            for result in results
+            {
+                print(result.value(forKey: "author")!)
+                print(result.value(forKey: "isbn")!)
+                print(result.value(forKey: "price")!)
+                print(result.value(forKey: "sellerUsername")!)
+                print(result.value(forKey: "title")!)
+
+            }
+            
+        } catch let error{
+            print(error)
+            return
+        }
     }
     
 }
