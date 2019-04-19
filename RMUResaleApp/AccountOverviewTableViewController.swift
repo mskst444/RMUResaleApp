@@ -21,7 +21,7 @@ class AccountOverviewTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Account Overview"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AccountOverviewTableViewCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -72,8 +72,8 @@ class AccountOverviewTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = cellData[indexPath.row]
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as?
+    
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AccountOverviewTableViewCell", for: indexPath) as?
             AccountOverviewTableViewCell else
             {
                 fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
