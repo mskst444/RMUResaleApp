@@ -78,7 +78,7 @@ class AccountOverviewTableViewController: UITableViewController {
             }
         
         cell.titleLabel.text = data.value(forKeyPath: "title") as? String
-        cell.priceLabel.text = data.value(forKeyPath: "price") as? String
+        cell.priceLabel.text = "$\(String(describing: data.value(forKeyPath: "price") as? String))"
         cell.authorLabel.text = data.value(forKeyPath: "author") as? String
         
         return cell
@@ -91,7 +91,7 @@ class AccountOverviewTableViewController: UITableViewController {
         
         let listData = cellData[indexPath.row]
         listingViewController.listingTitle.text = listData.value(forKeyPath: "title") as? String
-        listingViewController.listingPrice.text = listData.value(forKeyPath: "price") as? String
+        listingViewController.listingPrice.text = "$\(String(describing: listData.value(forKeyPath: "price") as? String))"
         listingViewController.listingSeller.text = listData.value(forKeyPath: "seller") as? String
         
         navigationController?.pushViewController(listingViewController, animated: true)
