@@ -31,6 +31,7 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         self.newPrice.delegate = self
         self.newISBN.delegate  = self
         self.newAuthor.delegate = self
+        self.displayName.text = Username.userMaster
         
     }
     

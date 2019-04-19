@@ -304,6 +304,7 @@
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="newListing:" destination="Uzk-8Q-Ns9" eventType="touchUpInside" id="hur-iT-Rzi"/>
+                                    <segue destination="neW-Gc-4af" kind="show" id="5D6-Lv-aoi"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a91-5p-9h6">
@@ -460,7 +461,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9XU-Lr-BbS">
-                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -680,6 +681,7 @@
         <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5D6-Lv-aoi"/>
         <segue reference="Oks-Hd-IeC"/>
         <segue reference="Mx0-ff-9oP"/>
     </inferredMetricsTieBreakers>

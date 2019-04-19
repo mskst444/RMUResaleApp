@@ -78,11 +78,11 @@ class AccountOverviewTableViewController: UITableViewController {
             {
                 fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
             }
-        
-        cell.titleLabel.text = data.value(forKeyPath: "title") as? String
-        cell.priceLabel.text = "$\(String(describing: data.value(forKeyPath: "price") as? String))"
-        cell.authorLabel.text = data.value(forKeyPath: "author") as? String
-        
+        print("DATA: \(data.value(forKeyPath: "title")!)")
+        cell.titleLabel?.text = "MATH" //\(data.value(forKeyPath: "title")!)"
+        cell.priceLabel?.text = "$\(String(describing: data.value(forKeyPath: "price") as? String))"
+        cell.authorLabel?.text = data.value(forKeyPath: "author") as? String
+
         return cell
     }
 
