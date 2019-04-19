@@ -21,7 +21,7 @@ class AccountOverviewTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Account Overview"
-        tableView.register(AccountOverviewTableViewCell.self, forCellReuseIdentifier: "AccountOverviewTableViewCell")
+        //tableView.register(AccountOverviewTableViewCell.self, forCellReuseIdentifier: "AccountOverviewTableView")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -72,7 +72,7 @@ class AccountOverviewTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = cellData[indexPath.row]
-        let cellidentifier = "AccountOverviewTableViewCell"
+        let cellidentifier = "AccountOverviewTableView"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellidentifier, for: indexPath) as?
             AccountOverviewTableViewCell else
             {
@@ -80,7 +80,8 @@ class AccountOverviewTableViewController: UITableViewController {
             }
         print("DATA: \(data.value(forKeyPath: "title")!)")
         cell.titleLabel?.text = "MATH" //\(data.value(forKeyPath: "title")!)"
-        cell.priceLabel?.text = "$\(String(describing: data.value(forKeyPath: "price") as? String))"
+        print("Cell: \(cell.titleLabel?.text)")
+        cell.priceLabel?.text = "$\(data.value(forKeyPath: "price") as? String))"
         cell.authorLabel?.text = data.value(forKeyPath: "author") as? String
 
         return cell

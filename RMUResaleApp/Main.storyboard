@@ -176,7 +176,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountOverviewTableView" rowHeight="90" id="owN-80-Kgx" customClass="AccountOverviewTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owN-80-Kgx" id="yMP-pp-bUU">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owN-80-Kgx" id="yMP-pp-bUU" customClass="AccountOverviewTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -209,8 +209,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="authorLabel" destination="NSp-qn-zN6" id="Wqi-r4-Qgn"/>
-                                    <outlet property="imageView" destination="he3-aF-qFt" id="o18-IX-0Ta"/>
-                                    <outlet property="photoImage" destination="he3-aF-qFt" id="vWR-ft-ptb"/>
                                     <outlet property="priceLabel" destination="b41-m5-BlL" id="GL3-Gp-J0F"/>
                                     <outlet property="titleLabel" destination="7Ny-7x-w92" id="1Ph-mv-S6c"/>
                                 </connections>
@@ -677,7 +675,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BookImage1" width="1250" height="1250"/>
+        <image name="BookImage1" width="600" height="600"/>
         <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>

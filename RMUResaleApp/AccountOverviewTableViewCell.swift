@@ -21,7 +21,6 @@ class AccountOverviewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.titleLabel.text = "Math"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
