@@ -20,11 +20,14 @@ class AccountOverviewTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Account Overview"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     
@@ -69,9 +72,8 @@ class AccountOverviewTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = cellData[indexPath.row]
-        let cellidentifier = "AccountOverviewTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellidentifier, for: indexPath) as?
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as?
             AccountOverviewTableViewCell else
             {
                 fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
