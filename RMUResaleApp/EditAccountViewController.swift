@@ -46,6 +46,7 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
             let changedEmail = self.changeEmailLabel.text!
             
             save(changedPassword, changedEmail)
+            performSegue(withIdentifier: "EditComplete", sender: sender)
         }
     }
     
