@@ -72,8 +72,8 @@ class AccountOverviewTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = cellData[indexPath.row]
-    
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AccountOverviewTableViewCell", for: indexPath) as?
+        let cellidentifier = "AccountOverviewTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellidentifier, for: indexPath) as?
             AccountOverviewTableViewCell else
             {
                 fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
