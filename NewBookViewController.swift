@@ -27,12 +27,37 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let getUser = UserInformation()
+        getUser.userFetchRequest(username: Username.userMaster)
+        let email = getUser.userEmail
+        
+        
         self.newTitle.delegate = self
         self.newPrice.delegate = self
         self.newISBN.delegate  = self
         self.newAuthor.delegate = self
         self.displayName.text = Username.userMaster
+        self.displayEmail.text = email
         
+        
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tapRecognizer)
+        
+    }
+    
+    //*************     KEYBOARD     ***************
+    //Method for dismissing keyboard with return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //This method will work for ALL text fields
+    //dismiss keyboard when tapping elsewhere
+    @objc func dismissKeyboard()
+    {
+        self.view.endEditing(true)
     }
     
     
@@ -57,7 +82,9 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
             let newAuthor = self.newAuthor.text!
             
             save(newTitle, priceNum, newISBN, newAuthor, seller)
-            checkBooksEntity()
+            //checkBooksEntity()
+            //segue back to Home page
+            performSegue(withIdentifier: "createBookSegue", sender: sender)
             
         }
     }
