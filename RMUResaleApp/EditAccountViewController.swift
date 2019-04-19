@@ -11,8 +11,8 @@ import CoreData
 
 class EditAccountViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var changedPasswordLabel: UITextField!
     @IBOutlet weak var changeEmailLabel: UITextField!
-    @IBOutlet weak var changePasswordLabel: UITextField!
     
     
     //set up constants for Invalid Entry alerts
@@ -25,15 +25,14 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.changeEmailLabel.delegate = self
-        self.changePasswordLabel.delegate = self
+        self.changedPasswordLabel.delegate = self
     }
-    
     
     @IBAction func saveChanges(_ sender: Any) {
         invalidPasswordAlert.addAction(closeAlertAction)
         invalidEmailAlert.addAction(closeAlertAction)
         
-        if (self.changePasswordLabel.text == "")
+        if (self.changedPasswordLabel.text == "")
         {
             present(invalidPasswordAlert, animated: true)
         }
@@ -43,13 +42,14 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            let changedPassword = self.changePasswordLabel.text!
+            let changedPassword = self.changedPasswordLabel.text!
             let changedEmail = self.changeEmailLabel.text!
             
             save(changedPassword, changedEmail)
         }
     }
     
+
     func save(_ changedPassword: String, _ changedEmail: String)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else

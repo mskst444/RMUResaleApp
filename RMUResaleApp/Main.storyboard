@@ -339,7 +339,7 @@
         <!--Edit Account Information-->
         <scene sceneID="cGZ-yK-JOU">
             <objects>
-                <viewController title="Edit Account Information" id="VaG-Kw-8dt" sceneMemberID="viewController">
+                <viewController title="Edit Account Information" id="VaG-Kw-8dt" customClass="EditAccountViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9l-Fb-rPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,12 +391,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Changes"/>
+                                <connections>
+                                    <action selector="saveChanges:" destination="VaG-Kw-8dt" eventType="touchUpInside" id="rNe-93-5X8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dIl-y9-snw"/>
                     </view>
                     <connections>
+                        <outlet property="changeEmailLabel" destination="4hn-yE-wak" id="7He-Ho-wrh"/>
+                        <outlet property="changedPasswordLabel" destination="2Gp-yU-JoS" id="NO7-rG-frE"/>
                         <segue destination="577-Bj-zUy" kind="show" identifier="EditComplete" id="rgf-4b-o57"/>
                     </connections>
                 </viewController>
@@ -680,7 +685,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wuk-Up-7aG"/>
-        <segue reference="Oks-Hd-IeC"/>
+        <segue reference="rgf-4b-o57"/>
         <segue reference="Mx0-ff-9oP"/>
     </inferredMetricsTieBreakers>
 </document>
