@@ -339,7 +339,7 @@
         <!--Edit Account Information-->
         <scene sceneID="cGZ-yK-JOU">
             <objects>
-                <viewController title="Edit Account Information" id="VaG-Kw-8dt" sceneMemberID="viewController">
+                <viewController title="Edit Account Information" id="VaG-Kw-8dt" customClass="EditAccountViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9l-Fb-rPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,13 +391,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Changes"/>
+                                <connections>
+                                    <action selector="saveChanges:" destination="VaG-Kw-8dt" eventType="touchUpInside" id="7HF-6H-4xZ"/>
+                                    <segue destination="577-Bj-zUy" kind="show" id="Vhy-F0-RHW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dIl-y9-snw"/>
                     </view>
                     <connections>
-                        <segue destination="577-Bj-zUy" kind="show" identifier="EditComplete" id="rgf-4b-o57"/>
+                        <outlet property="changeEmailLabel" destination="4hn-yE-wak" id="4QB-Xl-Cj5"/>
+                        <outlet property="changePasswordLabel" destination="2Gp-yU-JoS" id="VUD-Je-2po"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dL-RG-bbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,12 +680,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BookImage1" width="600" height="600"/>
+        <image name="BookImage1" width="1250" height="1250"/>
         <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5D6-Lv-aoi"/>
-        <segue reference="Oks-Hd-IeC"/>
+        <segue reference="Vhy-F0-RHW"/>
         <segue reference="Mx0-ff-9oP"/>
     </inferredMetricsTieBreakers>
 </document>
