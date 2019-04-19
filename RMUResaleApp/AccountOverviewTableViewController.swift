@@ -44,7 +44,7 @@ class AccountOverviewTableViewController: UITableViewController {
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Books")
         
-        fetchRequest.predicate = NSPredicate(format: "username = %@", user)
+        fetchRequest.predicate = NSPredicate(format: "sellerUsername = %@", user)
         
         do {
             cellData = try managedContext.fetch(fetchRequest)
