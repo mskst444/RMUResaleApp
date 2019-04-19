@@ -37,6 +37,10 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         self.newPasswordField.delegate = self
         self.confirmPasswordField.delegate = self
         self.accountWarningLabel.text = ""
+        
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
     
     
