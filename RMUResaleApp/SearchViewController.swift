@@ -129,8 +129,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         
         let mySearchRequest = NSFetchRequest<NSManagedObject>(entityName: "Books")
         
-        mySearchRequest.predicate = NSPredicate(format: "title like %@", title)
-        mySearchRequest.predicate = NSPredicate(format: "author like %@", author)
+        let titlePredicate = NSPredicate(format: "title like %@", title)
+        let authorPredicate = NSPredicate(format: "author like %@", author)
+        let andPredicate = NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [titlePredicate,authorPredicate])
+        mySearchRequest.predicate = andPredicate
         
         // BEGIN SEARCH
         do{

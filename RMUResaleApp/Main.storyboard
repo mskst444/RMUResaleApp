@@ -544,6 +544,7 @@
                         <outlet property="listingPrice" destination="WQn-pj-2uV" id="EAr-4W-62j"/>
                         <outlet property="listingSeller" destination="oKb-bf-cD0" id="EeX-hi-V75"/>
                         <outlet property="listingTitle" destination="CnY-uK-nlP" id="cGs-C3-kG3"/>
+                        <segue destination="577-Bj-zUy" kind="show" identifier="deleteSegue" id="cXq-8T-4Lg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOg-aE-hAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -690,7 +691,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wuk-Up-7aG"/>
-        <segue reference="rgf-4b-o57"/>
+        <segue reference="cXq-8T-4Lg"/>
         <segue reference="Mx0-ff-9oP"/>
     </inferredMetricsTieBreakers>
 </document>

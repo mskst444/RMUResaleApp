@@ -96,7 +96,7 @@ class AccountOverviewTableViewController: UITableViewController {
 
         specificListing.titleLabel = "\(listData.value(forKeyPath: "title")!)"
         print("\(listData.value(forKeyPath: "title")!)")
-        specificListing.priceLabel = "$\(listData.value(forKeyPath: "price")!)"
+        specificListing.priceLabel = "\(listData.value(forKeyPath: "price")!)"
         specificListing.sellerLabel = "\(listData.value(forKeyPath: "sellerUsername")!)"
         
         
