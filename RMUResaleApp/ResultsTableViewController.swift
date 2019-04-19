@@ -42,11 +42,11 @@ class ResultsTableViewController: UITableViewController {
         
         let cellidentifer = "ResultsTableView"
         
-        guard tableView.dequeueReusableCell(withIdentifier: cellidentifer, for: indexPath) as? ResultsTableViewCell
-            else
-        {
-            fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
-        }
+        //guard tableView.dequeueReusableCell(withIdentifier: cellidentifer, for: indexPath) as? ResultsTableViewCell
+            //else
+        //{
+//            fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
+  //      }
         
         
         
