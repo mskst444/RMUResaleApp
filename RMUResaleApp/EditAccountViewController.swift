@@ -14,6 +14,9 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var changedPasswordLabel: UITextField!
     @IBOutlet weak var changeEmailLabel: UITextField!
     
+    var edits: [NSManagedObject] = []
+    
+    
     
     //set up constants for Invalid Entry alerts
     let invalidPasswordAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter a valid password", preferredStyle: .alert)
@@ -21,12 +24,34 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
     let closeAlertAction = UIAlertAction(title: "Close", style: .default)
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.changeEmailLabel.delegate = self
         self.changedPasswordLabel.delegate = self
+        
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tapRecognizer)
     }
+    
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
+    
+    
+    
     
     @IBAction func saveChanges(_ sender: Any) {
         invalidPasswordAlert.addAction(closeAlertAction)
@@ -64,6 +89,14 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
         
         account.setValue(changedPassword, forKeyPath: "password")
         account.setValue(changedEmail, forKeyPath: "email")
+        
+        do{
+            try managedContext.save()
+            edits.append(account)
+        }
+        catch let error as NSError {
+            print("Could not save. \(error). \(error.userInfo)")
+        }
     }
     
     

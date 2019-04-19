@@ -14,17 +14,19 @@ class ListingViewController: UIViewController {
     @IBOutlet weak var listingPrice: UILabel!
     @IBOutlet weak var listingSeller: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.listingTitle.text = specificListing.titleLabel
+        self.listingPrice.text = "Price: " + specificListing.priceLabel
+        self.listingSeller.text = specificListing.sellerLabel
+    }
+    
+    
     @IBAction func deleteListing(_ sender: Any) {
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.listingTitle.text = ""
-        self.listingPrice.text = ""
-        self.listingSeller.text = ""
-    }
-    
 
     
 }

@@ -105,6 +105,13 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         book.setValue(newISBN, forKeyPath: "isbn")
         book.setValue(newAuthor, forKeyPath: "author")
         book.setValue(seller, forKeyPath: "sellerUsername")
+        
+        do{
+            try managedContext.save()
+            newPosts.append(book)
+        }
+        catch let error as NSError {
+            print("Could not save. \(error). \(error.userInfo)")
     }
     
     func checkBooksEntity(){
@@ -135,7 +142,8 @@ class NewBookViewController: UIViewController, UITextFieldDelegate{
         } catch let error{
             print(error)
             return
+            }
         }
     }
-    
+
 }
