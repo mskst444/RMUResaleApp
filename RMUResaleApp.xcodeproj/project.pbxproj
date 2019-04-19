@@ -18,6 +18,7 @@
 		DA0F2EDB226943A4009867DF /* AccountOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */; };
 		DA0F2EDD226943BC009867DF /* AccountOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */; };
 		DA0F2EDF226943D8009867DF /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDE226943D8009867DF /* ListingViewController.swift */; };
+		DA0F2EE122694F18009867DF /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0F2EE022694F17009867DF /* LaunchScreen.png */; };
 		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
 		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
 		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 		DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewController.swift; sourceTree = "<group>"; };
 		DA0F2EDE226943D8009867DF /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		DA0F2EE022694F17009867DF /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				DAFD94A32268071100311A7C /* UserInformation.swift */,
 				DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
 				235179152262477100221E24 /* Main.storyboard */,
+				DA0F2EE022694F17009867DF /* LaunchScreen.png */,
 				DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
 				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				235179162262477100221E24 /* Main.storyboard in Resources */,
+				DA0F2EE122694F18009867DF /* LaunchScreen.png in Resources */,
 				DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
 				2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
 				2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,

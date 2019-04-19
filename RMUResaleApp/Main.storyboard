@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="516" y="869"/>
         </scene>
-        <!--Account Overview Table View Controller-->
+        <!--Account Overview-->
         <scene sceneID="tW1-ga-gCq">
             <objects>
                 <tableViewController id="577-Bj-zUy" customClass="AccountOverviewTableViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -221,6 +221,13 @@
                             <outlet property="delegate" destination="577-Bj-zUy" id="cCX-7l-PaW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Account Overview" id="gUH-cP-EJq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Zs2-tH-YIQ">
+                            <connections>
+                                <segue destination="VaG-Kw-8dt" kind="show" id="Xcj-Xm-dxk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRd-ub-lPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,10 +397,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dIl-y9-snw"/>
                     </view>
+                    <connections>
+                        <segue destination="577-Bj-zUy" kind="show" identifier="EditComplete" id="rgf-4b-o57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dL-RG-bbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2181" y="869"/>
+            <point key="canvasLocation" x="2235" y="869"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="0is-oQ-ar0">
@@ -403,34 +413,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzo-97-OqN">
-                                <rect key="frame" x="150" y="386" width="115" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-eX-8SH">
+                                <rect key="frame" x="0.0" y="140" width="414" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Vm-hxc">
+                                <rect key="frame" x="20" y="661" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Textbook Search"/>
                                 <connections>
-                                    <segue destination="SI3-jo-9pB" kind="show" id="IZ9-SG-Hqs"/>
+                                    <segue destination="SI3-jo-9pB" kind="show" id="z4i-lU-v14"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-WM-fYU">
-                                <rect key="frame" x="145" y="433" width="125" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwZ-K9-70c">
+                                <rect key="frame" x="20" y="724" width="374" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Account Overview"/>
                                 <connections>
-                                    <segue destination="577-Bj-zUy" kind="show" id="Sc2-Ge-qh8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIw-cU-xVd">
-                                <rect key="frame" x="145" y="483" width="125" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Listing"/>
-                                <connections>
-                                    <segue destination="Uzk-8Q-Ns9" kind="show" id="hy3-Ch-G3P"/>
+                                    <segue destination="577-Bj-zUy" kind="show" id="Oks-Hd-IeC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uOC-Ze-Tmq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="RMU Resale" id="OXi-0l-7Yl">
+                        <barButtonItem key="rightBarButtonItem" title="Create New Listing" id="YXv-at-5en">
+                            <connections>
+                                <segue destination="Uzk-8Q-Ns9" kind="show" id="jZW-s2-4Nf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dam-Vn-w3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -662,8 +677,10 @@
     </scenes>
     <resources>
         <image name="BookImage1" width="1250" height="1250"/>
+        <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Oks-Hd-IeC"/>
         <segue reference="Mx0-ff-9oP"/>
     </inferredMetricsTieBreakers>
 </document>
