@@ -21,7 +21,7 @@ class AccountOverviewTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Account Overview"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AccountOverviewTableViewCell")
+        tableView.register(AccountOverviewTableViewCell.self, forCellReuseIdentifier: "AccountOverviewTableViewCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
