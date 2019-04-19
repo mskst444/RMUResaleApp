@@ -138,11 +138,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             
             for book in bookResults
             {
-                SearchResult.author.append("\(book.value(forKey: "author")!)")
-                SearchResult.isbn.append("\(book.value(forKey: "isbn")!)")
-                SearchResult.price.append(book.value(forKey: "price")! as! Float)
-                SearchResult.sellerUsername.append("\(book.value(forKey: "sellerUsername")!)")
-                SearchResult.title.append("\(book.value(forKey: "title")!)")
                 /* NOTE:
                  If there are results, this for loop will be entered and thus there is already a record with the attempted username
                  If there is no identical username already created, this loop will not even run once

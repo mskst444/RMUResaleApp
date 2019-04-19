@@ -20,6 +20,9 @@
 		DA0F2EDD226943BC009867DF /* AccountOverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */; };
 		DA0F2EDF226943D8009867DF /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F2EDE226943D8009867DF /* ListingViewController.swift */; };
 		DA0F2EE122694F18009867DF /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0F2EE022694F17009867DF /* LaunchScreen.png */; };
+		DA91053D226A75AA00B105A0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91053C226A75AA00B105A0 /* ResultsViewController.swift */; };
+		DA91053F226A761900B105A0 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91053E226A761900B105A0 /* ResultsTableViewController.swift */; };
+		DA910541226A765500B105A0 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA910540226A765500B105A0 /* ResultsTableViewCell.swift */; };
 		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
 		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
 		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
@@ -43,6 +46,9 @@
 		DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOverviewTableViewController.swift; sourceTree = "<group>"; };
 		DA0F2EDE226943D8009867DF /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		DA0F2EE022694F17009867DF /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		DA91053C226A75AA00B105A0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		DA91053E226A761900B105A0 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		DA910540226A765500B105A0 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
@@ -88,10 +94,11 @@
 				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
 				238A09CB2262299900455615 /* SearchViewController.swift */,
 				DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */,
-				DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */,
 				DA0F2EDE226943D8009867DF /* ListingViewController.swift */,
 				023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */,
 				DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
+				DA910540226A765500B105A0 /* ResultsTableViewCell.swift */,
+				DA91053C226A75AA00B105A0 /* ResultsViewController.swift */,
 				DAFD94A32268071100311A7C /* UserInformation.swift */,
 				235179152262477100221E24 /* Main.storyboard */,
 				DA0F2EE022694F17009867DF /* LaunchScreen.png */,
@@ -99,6 +106,8 @@
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
 				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
 				2381B90522558A17002BDA2C /* Info.plist */,
+				DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */,
+				DA91053E226A761900B105A0 /* ResultsTableViewController.swift */,
 			);
 			path = RMUResaleApp;
 			sourceTree = "<group>";
@@ -193,10 +202,13 @@
 				238A09CC2262299900455615 /* SearchViewController.swift in Sources */,
 				DA0F2EDD226943BC009867DF /* AccountOverviewTableViewController.swift in Sources */,
 				238A09CA2262293300455615 /* CreateAccountViewController.swift in Sources */,
+				DA91053F226A761900B105A0 /* ResultsTableViewController.swift in Sources */,
 				DA0F2EDB226943A4009867DF /* AccountOverviewTableViewCell.swift in Sources */,
 				DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */,
+				DA91053D226A75AA00B105A0 /* ResultsViewController.swift in Sources */,
 				DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */,
 				DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */,
+				DA910541226A765500B105A0 /* ResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
