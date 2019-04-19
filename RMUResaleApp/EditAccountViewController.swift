@@ -7,20 +7,64 @@
 //
 
 import UIKit
+import CoreData
 
-class EditAccountViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class EditAccountViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var changedPasswordLabel: UITextField!
+    @IBOutlet weak var changeEmailLabel: UITextField!
+    
     
     //set up constants for Invalid Entry alerts
-    let invalidPasswordAlert = UIAlertController(title: "Invalid Entry", message: "Please enter a valid password", preferredStyle: .alert)
-    
-    let invalidEmail = UIAlertController(title: "Invalid Entry", message: "Please enter a valid Email Address", preferredStyle: .alert)
-    
+    let invalidPasswordAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter a valid password", preferredStyle: .alert)
+    let invalidEmailAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter a valid email address", preferredStyle: .alert)
     let closeAlertAction = UIAlertAction(title: "Close", style: .default)
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.changeEmailLabel.delegate = self
+        self.changedPasswordLabel.delegate = self
+    }
+    
+    @IBAction func saveChanges(_ sender: Any) {
+        invalidPasswordAlert.addAction(closeAlertAction)
+        invalidEmailAlert.addAction(closeAlertAction)
+        
+        if (self.changedPasswordLabel.text == "")
+        {
+            present(invalidPasswordAlert, animated: true)
+        }
+        else if (self.changeEmailLabel.text == "")
+        {
+            present(invalidEmailAlert, animated: true)
+        }
+        else
+        {
+            let changedPassword = self.changedPasswordLabel.text!
+            let changedEmail = self.changeEmailLabel.text!
+            
+            save(changedPassword, changedEmail)
+        }
+    }
+    
 
+    func save(_ changedPassword: String, _ changedEmail: String)
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Accounts", in: managedContext)!
+        let account = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        account.setValue(changedPassword, forKeyPath: "password")
+        account.setValue(changedEmail, forKeyPath: "email")
+    }
+    
+    
+    
 }
