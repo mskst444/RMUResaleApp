@@ -139,7 +139,6 @@
                                 </state>
                                 <connections>
                                     <action selector="searchButton:" destination="SI3-jo-9pB" eventType="touchUpInside" id="LQa-oW-0VB"/>
-                                    <segue destination="QHC-Sm-ONl" kind="show" id="9nk-0v-Q0j"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOY-Jc-aM7">
@@ -159,6 +158,7 @@
                         <outlet property="ISBNField" destination="dtp-4o-iMl" id="N4x-Ew-ain"/>
                         <outlet property="authorField" destination="kBI-zb-Egs" id="iLp-Ug-kdi"/>
                         <outlet property="titleField" destination="2oT-Gw-pOB" id="qQ7-V1-BMq"/>
+                        <segue destination="QHC-Sm-ONl" kind="show" identifier="toSearchResultsSegue" id="2W5-0Q-LZR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4E-2z-TPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -685,6 +685,7 @@
         <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Xcj-Xm-dxk"/>
         <segue reference="wuk-Up-7aG"/>
         <segue reference="rgf-4b-o57"/>
         <segue reference="Mx0-ff-9oP"/>

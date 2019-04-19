@@ -120,6 +120,13 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         item.setValue(username, forKeyPath: "username")
         item.setValue(password, forKeyPath: "password")
         
+        do {
+            try managedContext.save()
+            items.append(item)
+        } catch let error as NSError {
+            print("Could not save. \(error). \(error.userInfo)")
+        }
+        
     }
     
     
