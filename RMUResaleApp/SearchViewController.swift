@@ -115,6 +115,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     //Function to search for a book by Title and Author
     func mySearchRequest(_ title: String, _ author: String)
     {
+        SearchResult.author = []
+        SearchResult.isbn = []
+        SearchResult.price = []
+        SearchResult.sellerUsername = []
+        SearchResult.title = []
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
             return
@@ -143,7 +148,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                  If there is no identical username already created, this loop will not even run once
                  */
                 
-                
+                SearchResult.author.append("\(book.value(forKey: "author")!)")
+                SearchResult.isbn.append("\(book.value(forKey: "isbn")!)")
+                SearchResult.price.append(book.value(forKey: "price")! as! Float)
+                SearchResult.sellerUsername.append("\(book.value(forKey: "sellerUsername")!)")
+                SearchResult.title.append("\(book.value(forKey: "title")!)")
             }
             
         } catch let error{

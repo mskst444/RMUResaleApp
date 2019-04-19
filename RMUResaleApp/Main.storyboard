@@ -158,7 +158,7 @@
                         <outlet property="ISBNField" destination="dtp-4o-iMl" id="N4x-Ew-ain"/>
                         <outlet property="authorField" destination="kBI-zb-Egs" id="iLp-Ug-kdi"/>
                         <outlet property="titleField" destination="2oT-Gw-pOB" id="qQ7-V1-BMq"/>
-                        <segue destination="Zdq-fh-ezA" kind="show" identifier="toSearchResultsSegue" id="wd0-xI-SIQ"/>
+                        <segue destination="Zdq-fh-ezA" kind="show" identifier="toSearchResultsSegue" id="CNb-Ic-GHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4E-2z-TPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
