@@ -7,24 +7,74 @@
 //
 
 import UIKit
+import CoreData
+import MessageUI
 
 class ResultsViewController: UIViewController {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var sellerLabel: UILabel!
+    
+    var sellerInfo: [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.titleLabel.text = ResultsData.titleData
+        self.priceLabel.text = "$" + "\(ResultsData.priceData)"
+        self.sellerLabel.text = ResultsData.sellerData
+        
+    }
+    
+    func fetchEmail (_ seller: String)
+    {
+        guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return
+        }
+        let managedContext = appdelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Accounts")
+        fetchRequest.predicate = NSPredicate(format: "username = %@", seller)
+        
+        do {
+            sellerInfo = try managedContext.fetch(fetchRequest)
+        }
+        catch let error as NSError
+        {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    @IBAction func contactSeller(_ sender: Any) {
+        let seller = ResultsData.sellerData
+        fetchEmail(seller)
+       
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            
+            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+            mail.setToRecipients([sellerInfo[0].value(forKey: "email") as! String])
+            mail.setMessageBody("<p> Hello my name is \(Username.userMaster), I am interest in " +
+            "purchasing your listing.", isHTML: true)
+            
+            present(mail, animated: true)
+        }
+        else
+        {
+            print("Could not send email")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    {
+        controller.dismiss(animated: true)
+    }
+    
+    
+    
+    
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
