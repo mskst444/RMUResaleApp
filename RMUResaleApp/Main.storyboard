@@ -459,6 +459,39 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="89.732142857142847"/>
         </scene>
+        <!--Sort By View Controller-->
+        <scene sceneID="Vru-38-ej5">
+            <objects>
+                <viewController id="Aka-zq-6MO" customClass="SortByViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cg-Ij-PPP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDH-Nu-a7M">
+                                <rect key="frame" x="0.0" y="255" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-h3-673">
+                                <rect key="frame" x="0.0" y="498" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apply"/>
+                                <connections>
+                                    <action selector="applySortButton:" destination="Aka-zq-6MO" eventType="touchUpInside" id="Pca-NQ-p47"/>
+                                    <segue destination="Zdq-fh-ezA" kind="show" id="qLd-n9-V5Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kTm-rP-0oH"/>
+                    </view>
+                    <connections>
+                        <outlet property="sortPicker" destination="lDH-Nu-a7M" id="e0T-hi-laN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSv-b1-1hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430.43478260869568" y="1658.7053571428571"/>
+        </scene>
         <!--Results Table View Controller-->
         <scene sceneID="rnP-HF-Wtj">
             <objects>
@@ -734,6 +767,7 @@
         <image name="LaunchScreen.png" width="1073" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qLd-n9-V5Z"/>
         <segue reference="wuk-Up-7aG"/>
         <segue reference="Oks-Hd-IeC"/>
         <segue reference="Mx0-ff-9oP"/>
