@@ -531,6 +531,8 @@
                             <outlet property="delegate" destination="Zdq-fh-ezA" id="1DN-hb-jnv"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="D6m-J6-8cN" kind="show" identifier="ShowResults" id="dXu-3E-fQt"/>
                     </connections>
