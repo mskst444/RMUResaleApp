@@ -156,6 +156,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t7Z-VI-e84"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="ISBNField" destination="dtp-4o-iMl" id="N4x-Ew-ain"/>
                         <outlet property="authorField" destination="kBI-zb-Egs" id="iLp-Ug-kdi"/>
@@ -484,9 +485,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="8WV-aF-QSf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Search Results" id="sJC-e9-Nm9">
+                                    <barButtonItem key="rightBarButtonItem" title="Sort" id="h22-Oj-gJu"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsTableViewCell" rowHeight="90" id="Akk-yO-OQQ" customClass="ResultsTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Akk-yO-OQQ" id="kp9-76-ylZ" customClass="ResultsTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
@@ -532,7 +542,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="D6m-J6-8cN" kind="show" identifier="ShowResults" id="dXu-3E-fQt"/>
                     </connections>
@@ -783,7 +793,6 @@
         <image name="robert_morris.png" width="723" height="631"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sT8-TN-sxH"/>
         <segue reference="Bkg-qH-wgJ"/>
         <segue reference="rgf-4b-o57"/>
         <segue reference="gLw-mB-VlG"/>

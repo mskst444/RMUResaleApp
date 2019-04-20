@@ -26,7 +26,7 @@
 		DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DABBB17C22665DF800183840 /* RMULaunchScreen.png */; };
 		DABBB18122665F5D00183840 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBB18022665F5D00183840 /* HomeScreenViewController.swift */; };
 		DABBB1A5226662B700183840 /* RMUResaleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */; };
-		DAF99FD6226BBA9B001B16CC /* robert_morris.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF99FD5226BBA9B001B16CC /* robert_morris.png */; };
+		DAF99FD8226BC0C8001B16CC /* robert_morris.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF99FD7226BC0C8001B16CC /* robert_morris.png */; };
 		DAFD94A42268071100311A7C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A32268071100311A7C /* UserInformation.swift */; };
 		DAFD94A622680EFC00311A7C /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD94A522680EFC00311A7C /* NewBookViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,7 @@
 		DABBB17C22665DF800183840 /* RMULaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RMULaunchScreen.png; path = RMUResaleApp/RMULaunchScreen.png; sourceTree = SOURCE_ROOT; };
 		DABBB18022665F5D00183840 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		DABBB1A4226662B700183840 /* RMUResaleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RMUResaleApp.xcdatamodel; sourceTree = "<group>"; };
-		DAF99FD5226BBA9B001B16CC /* robert_morris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robert_morris.png; path = ../../robert_morris.png; sourceTree = "<group>"; };
+		DAF99FD7226BC0C8001B16CC /* robert_morris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robert_morris.png; sourceTree = "<group>"; };
 		DAFD94A32268071100311A7C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		DAFD94A522680EFC00311A7C /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBookViewController.swift; path = ../NewBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +105,7 @@
 				DA91053C226A75AA00B105A0 /* ResultsViewController.swift */,
 				DAFD94A32268071100311A7C /* UserInformation.swift */,
 				235179152262477100221E24 /* Main.storyboard */,
-				DAF99FD5226BBA9B001B16CC /* robert_morris.png */,
+				DAF99FD7226BC0C8001B16CC /* robert_morris.png */,
 				DA0F2EE022694F17009867DF /* LaunchScreen.png */,
 				DABBB1A3226662B700183840 /* RMUResaleApp.xcdatamodeld */,
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
@@ -186,7 +186,7 @@
 				DABBB17D22665DF800183840 /* RMULaunchScreen.png in Resources */,
 				2381B90422558A17002BDA2C /* LaunchScreen.storyboard in Resources */,
 				1508A2932269479F003B0081 /* 1024x1024.png in Resources */,
-				DAF99FD6226BBA9B001B16CC /* robert_morris.png in Resources */,
+				DAF99FD8226BC0C8001B16CC /* robert_morris.png in Resources */,
 				2381B90122558A17002BDA2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
