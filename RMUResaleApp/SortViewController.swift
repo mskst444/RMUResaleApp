@@ -8,11 +8,16 @@
 
 import UIKit
 
-class SortByViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class SortViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     @IBOutlet weak var sortPicker: UIPickerView!
     
     var pickerData: [String] = [String]()
+    var authorResults:[String] = SearchResult.author
+    let isbnResults:[String] = SearchResult.isbn
+    let priceResults:[Float] = SearchResult.price
+    let sellerResults:[String] = SearchResult.sellerUsername
+    let titleResults:[String] = SearchResult.title
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +35,17 @@ class SortByViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // Number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-    return 1
+        return 1
     }
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    return pickerData.count
+        return pickerData.count
     }
     
     // The data to return fopr the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    return pickerData[row]
+        return pickerData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -54,7 +59,7 @@ class SortByViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     @IBAction func applySortButton(_ sender: Any) {
         sortResults(SortSetting.sortBy)
-        
+        performSegue(withIdentifier: "applyFilter", sender: sender)
     }
     func sortResults (_ sortSetting: String){
         let arraySize = SearchResult.author.count - 1
@@ -95,22 +100,58 @@ class SortByViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             }
         }
         else if(sortSetting == "Price: High to Low"){
-            
+            for j in 0...arraySize {
+                var highestPrice = SearchResult.price[j]
+                var newHighPriceIndex = j
+                for i in j...arraySize {
+                    if SearchResult.price[i] > highestPrice {
+                        highestPrice = SearchResult.price[i]
+                        newHighPriceIndex = i
+                    }
+                }
+                priceTemp = SearchResult.price[j]
+                SearchResult.price[j] = SearchResult.price[newHighPriceIndex]
+                SearchResult.price[newHighPriceIndex] = priceTemp
+                
+                temp = SearchResult.author[j]
+                SearchResult.author[j] = SearchResult.author[newHighPriceIndex]
+                SearchResult.author[newHighPriceIndex] = temp
+                
+                temp = SearchResult.isbn[j]
+                SearchResult.isbn[j] = SearchResult.isbn[newHighPriceIndex]
+                SearchResult.isbn[newHighPriceIndex] = temp
+                
+                temp = SearchResult.sellerUsername[j]
+                SearchResult.sellerUsername[j] = SearchResult.sellerUsername[newHighPriceIndex]
+                SearchResult.sellerUsername[newHighPriceIndex] = temp
+                
+                temp = SearchResult.title[j]
+                SearchResult.title[j] = SearchResult.title[newHighPriceIndex]
+                SearchResult.title[newHighPriceIndex] = temp
+            }
+        }
+        else{
+            SearchResult.author = authorResults
+            SearchResult.isbn = isbnResults
+            SearchResult.price = priceResults
+            SearchResult.sellerUsername = sellerResults
+            SearchResult.title = titleResults
         }
     }
-        
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 struct SortSetting {
     static var sortBy: String = ""
 }
+

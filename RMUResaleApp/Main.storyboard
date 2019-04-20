@@ -477,6 +477,40 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="89.732142857142847"/>
         </scene>
+        <!--Sort View Controller-->
+        <scene sceneID="nKD-I6-sPv">
+            <objects>
+                <viewController id="cJb-eV-X8h" customClass="SortViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rtq-hP-Dcn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rH5-b1-Unu">
+                                <rect key="frame" x="0.0" y="279" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbg-BB-95f">
+                                <rect key="frame" x="0.0" y="503" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applySortButton:" destination="cJb-eV-X8h" eventType="touchUpInside" id="iN0-Z5-IWg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hUf-aI-iTc"/>
+                    </view>
+                    <connections>
+                        <outlet property="sortPicker" destination="rH5-b1-Unu" id="pZG-Zq-XNI"/>
+                        <segue destination="Zdq-fh-ezA" kind="show" identifier="applyFilter" id="6Sm-WG-VaJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKN-Ni-1Bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484.05797101449281" y="1664.7321428571429"/>
+        </scene>
         <!--Results Table View Controller-->
         <scene sceneID="rnP-HF-Wtj">
             <objects>
@@ -490,7 +524,11 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Search Results" id="sJC-e9-Nm9">
-                                    <barButtonItem key="rightBarButtonItem" title="Sort" id="h22-Oj-gJu"/>
+                                    <barButtonItem key="rightBarButtonItem" title="Sort" id="h22-Oj-gJu">
+                                        <connections>
+                                            <segue destination="cJb-eV-X8h" kind="show" id="bIa-Pi-KqK"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -793,6 +831,7 @@
         <image name="robert_morris.png" width="723" height="631"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="6Sm-WG-VaJ"/>
         <segue reference="Bkg-qH-wgJ"/>
         <segue reference="rgf-4b-o57"/>
         <segue reference="gLw-mB-VlG"/>
