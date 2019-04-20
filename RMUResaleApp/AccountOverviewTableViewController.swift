@@ -89,7 +89,6 @@ class AccountOverviewTableViewController: UITableViewController {
         let listingViewController = storyboard?.instantiateViewController(withIdentifier: "ListingViewController") as! ListingViewController
 
         specificListing.titleLabel = "\(listData.value(forKeyPath: "title")!)"
-        print("\(listData.value(forKeyPath: "title")!)")
         specificListing.priceLabel = "\(listData.value(forKeyPath: "price")!)"
         specificListing.sellerLabel = "\(listData.value(forKeyPath: "sellerUsername")!)"
         

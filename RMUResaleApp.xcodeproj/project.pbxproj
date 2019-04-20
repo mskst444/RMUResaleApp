@@ -94,10 +94,12 @@
 				DABBB18022665F5D00183840 /* HomeScreenViewController.swift */,
 				238A09CB2262299900455615 /* SearchViewController.swift */,
 				DA0F2EDA226943A4009867DF /* AccountOverviewTableViewCell.swift */,
+				DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */,
 				DA0F2EDE226943D8009867DF /* ListingViewController.swift */,
 				023D20662267D4E800AC2DD2 /* EditAccountViewController.swift */,
 				DAFD94A522680EFC00311A7C /* NewBookViewController.swift */,
 				DA910540226A765500B105A0 /* ResultsTableViewCell.swift */,
+				DA91053E226A761900B105A0 /* ResultsTableViewController.swift */,
 				DA91053C226A75AA00B105A0 /* ResultsViewController.swift */,
 				DAFD94A32268071100311A7C /* UserInformation.swift */,
 				235179152262477100221E24 /* Main.storyboard */,
@@ -106,8 +108,6 @@
 				2381B90022558A17002BDA2C /* Assets.xcassets */,
 				2381B90222558A17002BDA2C /* LaunchScreen.storyboard */,
 				2381B90522558A17002BDA2C /* Info.plist */,
-				DA0F2EDC226943BC009867DF /* AccountOverviewTableViewController.swift */,
-				DA91053E226A761900B105A0 /* ResultsTableViewController.swift */,
 			);
 			path = RMUResaleApp;
 			sourceTree = "<group>";
