@@ -156,7 +156,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
             print(error)
             return
         }
-        print(SearchResult.author)
         return
     }
 
