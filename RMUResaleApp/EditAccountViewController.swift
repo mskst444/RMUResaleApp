@@ -19,7 +19,7 @@ class EditAccountViewController: UIViewController, UITextFieldDelegate {
     
     
     //set up constants for Invalid Entry alerts
-    let invalidPasswordAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter a valid password", preferredStyle: .alert)
+    let invalidPasswordAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter valid credentials", preferredStyle: .alert)
     let invalidEmailAlert = UIAlertController(title: "Invalid Credentials", message: "Please enter a valid email address", preferredStyle: .alert)
     let closeAlertAction = UIAlertAction(title: "Close", style: .default)
     
