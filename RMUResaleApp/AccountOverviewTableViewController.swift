@@ -75,7 +75,8 @@ class AccountOverviewTableViewController: UITableViewController {
                 fatalError("The dequeued cell is not an instance of AccountOverviewTableViewCell")
             }
         cell.titleLabel?.text = "\(data.value(forKeyPath: "title")!)"
-        cell.priceLabel?.text = "$\(data.value(forKeyPath: "price")!)"
+        let priceHolder = data.value(forKeyPath: "price") as! Double
+        cell.priceLabel?.text = String(format: "$%.2f", priceHolder)
         cell.authorLabel?.text = data.value(forKeyPath: "author") as? String
 
         return cell
@@ -89,7 +90,8 @@ class AccountOverviewTableViewController: UITableViewController {
         let listingViewController = storyboard?.instantiateViewController(withIdentifier: "ListingViewController") as! ListingViewController
 
         specificListing.titleLabel = "\(listData.value(forKeyPath: "title")!)"
-        specificListing.priceLabel = "\(listData.value(forKeyPath: "price")!)"
+        let newPriceHolder = listData.value(forKeyPath: "price") as! Double
+        specificListing.priceLabel = String(format: "%.2f", newPriceHolder)
         specificListing.sellerLabel = "\(listData.value(forKeyPath: "sellerUsername")!)"
         
         

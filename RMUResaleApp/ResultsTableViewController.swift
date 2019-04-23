@@ -45,7 +45,7 @@ class ResultsTableViewController: UITableViewController {
         let priceData = SearchResult.price[indexPath.row]
         
         cell.titleLabel?.text = titleData
-        cell.priceLabel?.text = "$" + "\(priceData)"
+        cell.priceLabel?.text = String(format: "$%.2f", priceData)
         cell.authorLabel?.text = authorData
         
         return cell
@@ -58,7 +58,7 @@ class ResultsTableViewController: UITableViewController {
         let resultsVC = storyboard?.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
         
         ResultsData.titleData = SearchResult.title[indexPath.row]
-        ResultsData.priceData = "\(SearchResult.price[indexPath.row])"
+        ResultsData.priceData = String(format: "%.2f", (SearchResult.price[indexPath.row]))
         ResultsData.authorData = SearchResult.author[indexPath.row]
         ResultsData.sellerData = SearchResult.sellerUsername[indexPath.row]
         

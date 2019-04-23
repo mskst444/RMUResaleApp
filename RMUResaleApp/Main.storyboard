@@ -18,32 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="robert_morris.png" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-cf-Xy2">
+                                <rect key="frame" x="154" y="644" width="240" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-Bf-6vO">
-                                <rect key="frame" x="123" y="264" width="169" height="30"/>
+                                <rect key="frame" x="123" y="312" width="169" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGk-6E-r6j">
-                                <rect key="frame" x="123" y="319" width="169" height="30"/>
+                                <rect key="frame" x="123" y="367" width="169" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYl-et-0Ie">
-                                <rect key="frame" x="20" y="558" width="371" height="30"/>
+                                <rect key="frame" x="20" y="606" width="371" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <state key="normal" title="Create Account"/>
                                 <connections>
                                     <segue destination="qtv-W0-R5V" kind="show" id="sT8-TN-sxH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RMU Resale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjW-vZ-gM8">
-                                <rect key="frame" x="14" y="132" width="387" height="56"/>
+                                <rect key="frame" x="14" y="180" width="387" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="54"/>
                                 <color key="textColor" red="0.52436887507611596" green="0.14085198396246962" blue="0.085734294713548542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -52,7 +54,7 @@
                                 <size key="shadowOffset" width="2" height="-1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ech-sM-bdU">
-                                <rect key="frame" x="20" y="387" width="374" height="57"/>
+                                <rect key="frame" x="20" y="435" width="374" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38989672484093252" green="0.027152285578808326" blue="0.047632099273439324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -65,16 +67,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6d-Af-VxK">
-                                <rect key="frame" x="20" y="488" width="374" height="42"/>
+                                <rect key="frame" x="20" y="536" width="374" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.98783632973932844" green="0.2752925320399085" blue="0.15984443343869334" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="robert_morris.png" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-cf-Xy2">
-                                <rect key="frame" x="154" y="644" width="240" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -176,9 +174,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="5LF-Ry-a5x">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Results" id="z9w-GS-6NX">
+                                    <barButtonItem key="leftBarButtonItem" title="Home" id="aGx-cy-dV7">
+                                        <connections>
+                                            <segue destination="neW-Gc-4af" kind="show" id="cFb-Tp-Qji"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountOverviewTableView" rowHeight="90" id="owN-80-Kgx" customClass="AccountOverviewTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owN-80-Kgx" id="yMP-pp-bUU" customClass="AccountOverviewTableViewCell" customModule="RMUResaleApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
@@ -346,10 +357,10 @@
             </objects>
             <point key="canvasLocation" x="1915.9420289855075" y="89.732142857142847"/>
         </scene>
-        <!--Edit Account Information-->
+        <!--Edit Account-->
         <scene sceneID="cGZ-yK-JOU">
             <objects>
-                <viewController title="Edit Account Information" id="VaG-Kw-8dt" customClass="EditAccountViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Edit Account" id="VaG-Kw-8dt" customClass="EditAccountViewController" customModule="RMUResaleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9l-Fb-rPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +534,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Search Results" id="sJC-e9-Nm9">
+                                <navigationItem title="Results" id="sJC-e9-Nm9">
+                                    <barButtonItem key="leftBarButtonItem" title="Search" id="xaC-MX-jyK">
+                                        <connections>
+                                            <segue destination="SI3-jo-9pB" kind="show" id="g1x-jb-Lhy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" title="Sort" id="h22-Oj-gJu">
                                         <connections>
                                             <segue destination="cJb-eV-X8h" kind="show" id="bIa-Pi-KqK"/>
@@ -709,6 +725,7 @@
                         <outlet property="listingPrice" destination="WQn-pj-2uV" id="EAr-4W-62j"/>
                         <outlet property="listingSeller" destination="oKb-bf-cD0" id="EeX-hi-V75"/>
                         <outlet property="listingTitle" destination="CnY-uK-nlP" id="cGs-C3-kG3"/>
+                        <segue destination="577-Bj-zUy" kind="show" identifier="deleteSegue" id="qPJ-21-v9x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOg-aE-hAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -834,6 +851,7 @@
         <segue reference="6Sm-WG-VaJ"/>
         <segue reference="Bkg-qH-wgJ"/>
         <segue reference="rgf-4b-o57"/>
+        <segue reference="g1x-jb-Lhy"/>
         <segue reference="gLw-mB-VlG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,8 +12,7 @@ import CoreData
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var items: [NSManagedObject] = []
-    let wrongUsername: String = "Invalid Username"
-    let wrongPassword: String = "Invalid Password"
+    let wrongUsername: String = "Invalid Username/Password"
     let blankFields: String = "Enter Username and Password"
     //textField outlets
     @IBOutlet weak var usernameField: UITextField!
